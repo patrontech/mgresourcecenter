@@ -30,10 +30,19 @@
 			<div class="branding docs-branding">
 				<div class="container-fluid position-relative py-2">
 					<div class="docs-logo-wrapper">
-						<div class="site-logo"><a class="navbar-brand" href="index.html"><img class="logo-icon mr-2" src="assets/images/patron-logo-black.svg" alt="logo"><span class="logo-text">Virtual Meet <span class="text-alt">& Greets</span></span></a></div>    
+                  <button id="docs-sidebar-toggler" class="docs-sidebar-toggler docs-sidebar-visible mr-2 d-xl-none" type="button">
+                     <span></span>
+                     <span></span>
+                     <span></span>
+                 </button>
+						<div class="site-logo">
+                     <a class="navbar-brand" href="index.html">
+                        <img class="logo-icon mr-2" src="assets/images/patron-logo-black.svg" alt="logo"><span class="logo-text">Virtual Meet 
+                           <span class="text-alt">& Greets</span></a>
+                  </div>    
 					</div><!--//docs-logo-wrapper-->
 					<div class="docs-top-utilities d-flex justify-content-end align-items-center">
-						<ul class=" nav nav-pills">
+						<ul class="list-inline mx-md-3 mx-lg-5 mb-0 d-none d-lg-flex">
 							<li class="nav-item px-1">
 							  <a class="nav-link" href="index.html">Home</a>
 							</li>
@@ -63,7 +72,9 @@
             <nav id="docs-nav" class="docs-nav navbar">
                <ul class="section-items list-unstyled nav flex-column pb-3">
                   <li class="nav-item section-title"><a class="nav-link scrollto active" href="#section-1"><span class="theme-icon-holder mr-2"><i class="fa fa-arrow-down"></i></span>Customer Resources</a></li>
-                  <li class="nav-item"><a class="nav-link scrollto" href="#item-1-1">..</a></li>
+                  <li class="nav-item"><a class="nav-link scrollto" href="#item-1-1">Much more coming soon!</a></li>
+                  <li class="nav-item"><a class="nav-link scrollto" href="#item-1-2">Requirements</a></li>
+
                   <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-2"><span class="theme-icon-holder mr-2"><i class="fa fa-video-camera"></i></span>Videos</a></li>
                   <li class="nav-item"><a class="nav-link scrollto" href="#item-2-1">Joining a Session </a></li>
 
@@ -78,6 +89,7 @@
                   <header class="docs-header">
                      <h1 class="docs-heading">Customer Resources<span class="docs-time">Last updated: September 15th, 2020</span></h1>
                      <section class="docs-intro">
+                        <h2 class="section-heading">Much more coming soon</h2>
                         <p>
                            ..
                         </p>
@@ -85,9 +97,41 @@
                      <!--//docs-intro-->
 
                      <section class="docs-section" id="item-1-1">
-                        <p>
-                           ..
-                        </p>
+                        <h2 class="section-heading">Browser Compatibility</h2>
+                        <div class="table-responsive my-4">
+                           <table class="table table-striped">
+                              <thead>
+                                 <tr>
+                                    <th scope="col"><h4>Platform</h4></th>
+                                    <th scope="col"><h4>
+                                       Supported Browsers
+                                    </h4></th>
+                                 </tr>
+                              </thead>
+                              <tbody>
+                                 <tr>
+                                    <th scope="row">Android</th>
+                                    <td>Google Chrome, Firefox</td>
+                                 </tr>
+                                 <tr>
+                                    <th scope="row">iOS</th>
+                                    <td>Safari 11</td>
+                                 </tr>
+                                 <tr>
+                                    <th scope="row">Linux</th>
+                                    <td>Google Chrome, Firefox</td>
+                                 </tr>
+                                 <tr>
+                                    <th scope="row">macOS</th>
+                                    <td>Google Chrome, Firefox, Safari 11</td>
+                                 </tr>
+                                 <tr>
+                                    <th scope="row">Windows</th>
+                                    <td>Google Chrome, Firefox. Edge</td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </div>
                   </header>
                   </section>
                </article>
