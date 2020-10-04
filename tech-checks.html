@@ -1,478 +1,533 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <title>Patron Technology</title>
-      <!-- Meta -->
-      <meta charset="utf-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link rel="shortcut icon" href="">
-      <!-- Google Font -->
-      <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet">
-      <!-- FontAwesome JS-->
-		<script src="https://use.fontawesome.com/26cc2d6c5f.js"></script>
-      <!-- Plugins CSS -->
-      <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.2/styles/atom-one-dark.min.css">
-      <!-- Theme CSS -->  
-      <link id="theme-style" rel="stylesheet" href="assets/css/theme.css">
 
-      <style>
+<head>
+   <title>Patron Technology</title>
+   <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="shortcut icon" href="">
+   <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet">
+   <script src="https://use.fontawesome.com/26cc2d6c5f.js"></script>
+   <link id="theme-style" rel="stylesheet" href="assets/css/theme.css">
 
+   <style>
+      .list-group {
+         display: flex;
+         flex-direction: column;
+         padding-left: 0;
+         margin-bottom: 0;
+      }
 
+      .list-group-lines .list-group-item {
+         border-radius: 0.25rem;
+         background: transparent;
+         padding: 20px;
+         margin-bottom: 15px;
+      }
+   </style>
+</head>
 
-
-.list-group {
-    display: flex;
-    flex-direction: column;
-    padding-left: 0;
-    margin-bottom: 0;}
-
-.list-group-lines .list-group-item {
-    border-radius: 0.25rem;
-    background: transparent;
-    padding: 20px;
-    margin-bottom: 15px;
-}
-
-
-
-
-
-      </style>
-   </head>
-   <body class="docs-page">
-		<header class="header fixed-top">	    
-			<div class="branding docs-branding">
-				<div class="container-fluid position-relative py-2">
-					<div class="docs-logo-wrapper">
-                  <button id="docs-sidebar-toggler" class="docs-sidebar-toggler docs-sidebar-visible mr-2 d-xl-none" type="button">
-                     <span></span>
-                     <span></span>
-                     <span></span>
-                 </button>
-						<div class="site-logo">
-                     <a class="navbar-brand" href="index.html">
-                        <img class="logo-icon mr-2" src="assets/images/patron-logo-black.svg" alt="logo"><span class="logo-text">Virtual Meet 
-                           <span class="text-alt">& Greets</span></a>
-                  </div>    
-					</div><!--//docs-logo-wrapper-->
-					<div class="docs-top-utilities d-flex justify-content-end align-items-center">
-						<ul class="list-inline mx-md-3 mx-lg-5 mb-0 d-none d-lg-flex">
-							<li class="nav-item px-1">
-							  <a class="nav-link" href="index.html">Home</a>
-							</li>
-							  <li class="nav-item dropdown px-1">
-								<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Documentation</a>
-								<div class="dropdown-menu">
-								  <a class="dropdown-item" href="the-basics.html">The Basics</a>
-								  <a class="dropdown-item" href="tech-checks.html">Tech Checks</a>
-								</div>
-							  </li>
-							<li class="nav-item dropdown px-1">
-							  <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Resources</a>
-							  <div class="dropdown-menu">
-								<a class="dropdown-item" href="talent-resources.html">Talent</a>
-								<a class="dropdown-item" href="customer-resources.html">Customers</a>
-							  </div>
-							</li>
-						  </ul><!--//social-list-->
-					</div><!--//docs-top-utilities-->
-				</div><!--//container-->
-			</div><!--//branding-->
-		</header>
-      <!--//header-->
-      <!--//header-->
-      <div class="docs-wrapper">
-         <div id="docs-sidebar" class="docs-sidebar">
-
-            <nav id="docs-nav" class="docs-nav navbar">
-               <ul class="section-items list-unstyled nav flex-column pb-3">
-                  <li class="nav-item section-title"><a class="nav-link scrollto active" href="#section-1"><span class="theme-icon-holder mr-2"><i class="fa fa-check"></i></span>Tech Checks</a></li>
-                  <li class="nav-item"><a class="nav-link scrollto" href="#item-1-1">Prerequisites</a></li>
-                  <li class="nav-item"><a class="nav-link scrollto" href="#item-1-2">Process</a></li>
-                  <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-2"><span class="theme-icon-holder mr-2"><i class="fa fa-map"></i></span>Guide</a></li>
-                  <li class="nav-item"><a class="nav-link scrollto" href="#item-2-1">Initial Setup </a></li>
-                  <li class="nav-item"><a class="nav-link scrollto" href="#item-2-2">Starting a Tech Check</a></li>
-                  <li class="nav-item"><a class="nav-link scrollto" href="#item-2-3">Vetting an Attendee</a></li>
-                  <li class="nav-item"><a class="nav-link scrollto" href="#item-2-4">Determining a Pass or Fail</a></li>
-                  <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-3"><span class="theme-icon-holder mr-2"><i class="fa fa-exclamation-circle"></i></span>Troubleshooting</a></li>
-                  <li class="nav-item"><a class="nav-link scrollto" href="#item-3-1">Basic</a></li>
-                  <li class="nav-item"><a class="nav-link scrollto" href="#item-3-2">Private Session</a></li>
-                  <li class="nav-item"><a class="nav-link scrollto" href="#item-3-3">Microphone</a></li>
-                  <li class="nav-item"><a class="nav-link scrollto" href="#item-3-4">Camera</a></li>
-                  <li class="nav-item"><a class="nav-link scrollto" href="#item-3-5">Audio</a></li>
-                  <li class="nav-item"><a class="nav-link scrollto" href="#item-3-5">Video</a></li>
-                  <li class="nav-item"><a class="nav-link scrollto" href="#item-3-6">Network Connection</a></li>
-                  <li class="nav-item"><a class="nav-link scrollto" href="#item-3-7">Everything else..</a></li>
-               </ul>
-            </nav>
-            <!--//docs-nav-->
-         </div>
-         <!--//docs-sidebar-->
-         <div class="docs-content">
-            <div class="container">
-               <article class="docs-article" id="section-1">
-
-                  <header class="docs-header">
-                     <h1 class="docs-heading">Tech Checks<span class="docs-time">Last updated: September 15th, 2020</span></h1>
-
-                     
-                     <section class="docs-intro">
-
-                        <p>
-                           Tech Checks are the process in which an Event Tech determines if an attendee has their microphone, camera, and network connection configured properly prior to them joining their session with the talent.  
-                        </p>
-                     </section>
-                     <!--//docs-intro-->
-                     <div class="callout-block callout-block-info">
-                        <div class="content">
-                           <h4 class="callout-title">
-                              <span class="callout-icon-holder mr-1">
-                              <i class="fa fa-info-circle"></i>
-                              </span><!--//icon-holder-->
-                              Note
-                           </h4>
-                           <p>
-                              While there is a set of criteria that needs to be met prior to an approval, ultimately the question that needs to be answered as a 'yes' in order to pass is <em>"Can this attendee have a one-to-two minute uninterrupted conversation with the talent without dealing with consistent or frequent audio/video complications?"</em>
-                           </p>
-                        </div>
-                        <!--//content-->
+<body class="docs-page">
+   <header class="header fixed-top">
+      <div class="branding docs-branding">
+         <div class="container-fluid position-relative py-2">
+            <div class="docs-logo-wrapper">
+               <button id="docs-sidebar-toggler" class="docs-sidebar-toggler docs-sidebar-visible mr-2 d-xl-none"
+                  type="button">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+               </button>
+               <div class="site-logo">
+                  <a class="navbar-brand" href="index.html">
+                     <img class="logo-icon mr-2" src="./assets/images/patron-logo-black.svg" alt="logo"><span
+                        class="logo-text">Virtual Meet
+                        <span class="text-alt">& Greets</span></a>
+               </div>
+            </div>
+            <div class="docs-top-utilities d-flex justify-content-end align-items-center">
+               <ul class="list-inline mx-md-3 mx-lg-5 mb-0 d-none d-lg-flex">
+                  <li class="nav-item px-1">
+                     <a class="nav-link" href="index.html">Home</a>
+                  </li>
+                  <li class="nav-item dropdown px-1">
+                     <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button"
+                        aria-haspopup="true" aria-expanded="false">Documentation</a>
+                     <div class="dropdown-menu">
+                        <a class="dropdown-item" href="the-basics.html">The Basics</a>
+                        <a class="dropdown-item" href="tech-checks.html">Tech Checks</a>
                      </div>
-                     <!--//callout-block-->
+                  </li>
+                  <li class="nav-item dropdown px-1">
+                     <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button"
+                        aria-haspopup="true" aria-expanded="false">Resources</a>
+                     <div class="dropdown-menu">
+                        <a class="dropdown-item" href="talent-resources.html">Talent</a>
+                        <a class="dropdown-item" href="customer-resources.html">Customers</a>
+                     </div>
+                  </li>
+               </ul>
+            </div>
+         </div>
+      </div>
+   </header>
+   <div class="docs-wrapper">
+      <div id="docs-sidebar" class="docs-sidebar">
+
+         <nav id="docs-nav" class="docs-nav navbar">
+            <ul class="section-items list-unstyled nav flex-column pb-3">
+               <li class="nav-item section-title"><a class="nav-link scrollto active" href="#section-1"><span
+                        class="theme-icon-holder mr-2"><i class="fa fa-check"></i></span>Tech Checks</a></li>
+               <li class="nav-item"><a class="nav-link scrollto" href="#item-1-1">Prerequisites</a></li>
+               <li class="nav-item"><a class="nav-link scrollto" href="#item-1-2">Process</a></li>
+               <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-2"><span
+                        class="theme-icon-holder mr-2"><i class="fa fa-map"></i></span>Guide</a></li>
+               <li class="nav-item"><a class="nav-link scrollto" href="#item-2-1">Initial Setup </a></li>
+               <li class="nav-item"><a class="nav-link scrollto" href="#item-2-2">Starting a Tech Check</a></li>
+               <li class="nav-item"><a class="nav-link scrollto" href="#item-2-3">Vetting an Attendee</a></li>
+               <li class="nav-item"><a class="nav-link scrollto" href="#item-2-4">Determining a Pass or Fail</a></li>
+               <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-3"><span
+                        class="theme-icon-holder mr-2"><i
+                           class="fa fa-exclamation-circle"></i></span>Troubleshooting</a></li>
+               <li class="nav-item"><a class="nav-link scrollto" href="#item-3-1">Basic</a></li>
+               <li class="nav-item"><a class="nav-link scrollto" href="#item-3-2">Private Session</a></li>
+               <li class="nav-item"><a class="nav-link scrollto" href="#item-3-3">Microphone</a></li>
+               <li class="nav-item"><a class="nav-link scrollto" href="#item-3-4">Camera</a></li>
+               <li class="nav-item"><a class="nav-link scrollto" href="#item-3-5">Audio</a></li>
+               <li class="nav-item"><a class="nav-link scrollto" href="#item-3-5">Video</a></li>
+               <li class="nav-item"><a class="nav-link scrollto" href="#item-3-6">Network Connection</a></li>
+               <li class="nav-item"><a class="nav-link scrollto" href="#item-3-7">Everything else..</a></li>
+            </ul>
+         </nav>
+      </div>
+      <div class="docs-content">
+         <div class="container">
+            <article class="docs-article" id="section-1">
+
+               <header class="docs-header">
+                  <h1 class="docs-heading">Tech Checks<span class="docs-time">Last updated: September 15th, 2020</span>
+                  </h1>
 
 
-                     <section class="docs-section" id="item-1-1">
-                        <h2 class="section-heading">Prerequisites</h2>
+                  <section class="docs-intro">
+
+                     <p>
+                        Tech Checks are the process in which an Event Tech determines if an attendee has their
+                        microphone, camera, and network connection configured properly prior to them joining their
+                        session with the talent.
+                     </p>
+                  </section>
+                  <div class="callout-block callout-block-info">
+                     <div class="content">
+                        <h4 class="callout-title">
+                           <span class="callout-icon-holder mr-1">
+                              <i class="fa fa-info-circle"></i>
+                           </span>
+                           Note
+                        </h4>
+                        <p>
+                           While there is a set of criteria that needs to be met prior to an approval, ultimately the
+                           question that needs to be answered as a 'yes' in order to pass is <em>"Can this attendee have
+                              a one-to-two minute uninterrupted conversation with the talent without dealing with
+                              consistent or frequent audio/video complications?"</em>
+                        </p>
+                     </div>
+                  </div>
 
 
-                        <div class="row">
-                           <div class="col-md-6">
-                             <ul class="list-group list-group-lines">
-                               <li class="list-group-item d-flex align-items-center boxed">
+                  <section class="docs-section" id="item-1-1">
+                     <h2 class="section-heading">Prerequisites</h2>
+
+
+                     <div class="row">
+                        <div class="col-md-6">
+                           <ul class="list-group list-group-lines">
+                              <li class="list-group-item d-flex align-items-center boxed">
                                  <i class="fa fa-check mr-2 text-primary fs-24"></i>
                                  <p>Completed <a href="the-basics.html">Getting Started</a></p>
                               </li>
-                               <li class="list-group-item d-flex align-items-center">
+                              <li class="list-group-item d-flex align-items-center">
                                  <i class="fa fa-check mr-2 text-primary fs-24"></i>
-                                 Shadowed an Event Operations Manager 
+                                 Shadowed an Event Operations Manager
                               </li>
-                             </ul>
-                           </div>
-                           <div class="col-md-6">
-                             <ul class="list-group list-group-lines">
-                               <li class="list-group-item d-flex align-items-center">
+                           </ul>
+                        </div>
+                        <div class="col-md-6">
+                           <ul class="list-group list-group-lines">
+                              <li class="list-group-item d-flex align-items-center">
                                  <i class="fa fa-check mr-2 text-primary fs-24"></i>
                                  <p>
                                     Watched <strong>all</strong> instructional videos
                                  </p>
                               </li>
-                               <li class="list-group-item d-flex align-items-center">
+                              <li class="list-group-item d-flex align-items-center">
                                  <i class="fa fa-check mr-2 text-primary fs-24"></i>
                                  <p>
                                     Completed first proficiency test
                                  </p>
-                               </li>
-                             </ul>
-                           </div>
-                         </div>
+                              </li>
+                           </ul>
+                        </div>
+                     </div>
 
-                     </section>
+                  </section>
 
-                     <section class="docs-section">
-                        <h2 class="section-heading" id="item-1-2">Overview</h2>
-                        <p>
-                           Shown below is an illustration that walks you through the decision making process on how you can determine if an attendee passes or fails our Tech Check. Aside from this illustration that highlights some of the issues we run into, the rest of this walkthrough will demonstrate what the workflow is for an ideal Tech Check with an attendee. 
-                        </p>
-                        <img src="assets/images/flowchart.png">
-                     </section>
+                  <section class="docs-section">
+                     <h2 class="section-heading" id="item-1-2">Overview</h2>
+                     <p>
+                        Shown below is an illustration that walks you through the decision making process on how you can
+                        determine if an attendee passes or fails our Tech Check. Aside from this illustration that
+                        highlights some of the issues we run into, the rest of this walkthrough will demonstrate what
+                        the workflow is for an ideal Tech Check with an attendee.
+                     </p>
+                     <img src="./assets/images/flowchart.png">
+                  </section>
 
 
-                  </header>
-                  </section>
-               </article>
-               <article class="docs-article" id="section-2">
-                  <h1 class="docs-heading">Guide<span class="docs-time">Last updated: September 15th, 2020</span></h1>
-                  <section class="docs-section" id="item-2-1">
-                     <h2 class="section-heading">Initial Setup</h2>
-                     <p>
-                        Before beginning any Tech Checks be sure to follow the following setup steps:
-                     </p>
-                     <ol>
-                        <li>
-                           Make sure you are not in the room. When loading the page for a Meet and Greet you can determine if you are in the room or not by seeing if there is a button in the middle of the page that says "Click Here to Join Room".
-                        </li>
-                        <li>
-                           If you are in the room in your settings, change Autojoin so that it reads as Autojoin OFF. Once it's set to Autojoin OFF refresh the page and look for the "Click Here to Join Room" button to confirm that you've successfully exited the room.
-                        </li>
-                        <li>
-                           Turn off your microphone and camera. <em>*These do not need to be enabled for you to perform a tech check.</em>
-                        </li>
-                        <li>
-                           Once the Event Staff is in the room let them know, in the host chat, that you're there and are currently working through the customer queue to get everyone approved. 
-                        </li>
-                     </ol>
-                  </section>
-                  <!--//section-->
-                  <!--//docs-article-->
-                  <section class="docs-section" id="item-2-2">
-                     <h2 class="section-heading">Starting a Tech Check</h2>
-                     <p>
-                        Every tech check begins by initiating a private session with the attendees that are waiting in the Customer Queue. 
-                     </p>
-                     <p>
-                        To initiate a private session begin by <strong>right</strong> clicking (do not left click, that will prompt you to let them into the room) on the attendee's name that you would like to check. You'll then click Ok to the prompt asking you if you'd like to begin the private session. 
-                     </p>
-                     <p>
-                        Once the private session modal launches, the customer will have be notified and given a 3 second warning that a tech check is about to begin.
-                     </p>
-                     <img src="assets/images/customer.gif">
-                     <br>
-                     <p>
-                        <em>Left shows the <strong>Event Tech's</strong> perspective and right shows the <strong>customer's.</strong></em>
-                     </p>
-                  </section>
-                  <!--//section-->
-                  <section class="docs-section" id="item-2-3">
-                     <h2 class="section-heading">Vetting an Attendee</h2>
-                     <p>
-                        Start off the conversation by using the following script:
-                     </p>
-                     <br>
-                     <div class="card bg-primary text-white text-center p-3 mb-3">
-                        <blockquote class="blockquote mb-0">
-                           <em>“Hello [<strong><span class="text-white">attendee name</span></strong>] I am [<strong><span class="text-white">event tech name</span></strong>] with tech support. I'm just doing a quick check on your audio and video before you begin your one-on-one session. Can you hear me and see me okay?"</em></p>                          
-                        </blockquote>
-                      </div>
-                     <br>
-                     <p >
-                        Once you've confirmed that you're able to hear and see the attendee and they can hear and see you..
-                     </p>
-                     <br>
-                     <div class="card bg-primary text-white text-center p-3 mb-3">
-                        <blockquote class="blockquote mb-0">
-                           <em>"Okay great! You're all set, don't change anything and your session will be starting shortly."</em>
-                        </blockquote>
-                      </div>
-                     <br>
-                     <p>You can now click <strong>Approve</strong> and then proceed to exit the Tech Check by clicking <strong>Close Session</strong>. </p>
-                  </section>
-                  <!--//section-->
-                 
-                  <section class="docs-section" id="item-2-4">
-                     <h2 class="section-heading">Determining a Pass or Fail</h2>
-                     <P>
-                        Like mentioned on the last page, there is a specific set of criteria that the customer has to meet in order to be considered as <strong>approved</strong> to have their session with the talent. 
-                     </P>
-                     <p>
-                        While there are requirements that cannot be looked past, there is a bit of discretion required from the Event Tech in order to make the final determination wether or not that attendee <strong>passes</strong> or <strong>fails</strong> a Tech Check. 
-                     </p>
-                     <p>
-                        First lets cover the specific criteria that I'm referencing: 
-                     </p>
-                     <ul>
-                        <li>You can clearly see the attendee</li>
-                        <li>The attendee can clearly see you </li>
-                        <li>You can clearly hear the attendee </li>
-                        <li>The attendee can clearly hear you </li>
-                     </ul>
-                     <div class="callout-block callout-block-warning">
-                        <div class="content">
-                           <h4 class="callout-title">
-                              <span class="callout-icon-holder mr-1">
+               </header>
+               </section>
+            </article>
+            <article class="docs-article" id="section-2">
+               <h1 class="docs-heading">Guide<span class="docs-time">Last updated: September 15th, 2020</span></h1>
+               <section class="docs-section" id="item-2-1">
+                  <h2 class="section-heading">Initial Setup</h2>
+                  <p>
+                     Before beginning any Tech Checks be sure to follow the following setup steps:
+                  </p>
+                  <ol>
+                     <li>
+                        Make sure you are not in the room. When loading the page for a Meet and Greet you can determine
+                        if you are in the room or not by seeing if there is a button in the middle of the page that says
+                        "Click Here to Join Room".
+                     </li>
+                     <li>
+                        If you are in the room in your settings, change Autojoin so that it reads as Autojoin OFF. Once
+                        it's set to Autojoin OFF refresh the page and look for the "Click Here to Join Room" button to
+                        confirm that you've successfully exited the room.
+                     </li>
+                     <li>
+                        Turn off your microphone and camera. <em>*These do not need to be enabled for you to perform a
+                           tech check.</em>
+                     </li>
+                     <li>
+                        Once the Event Staff is in the room let them know, in the host chat, that you're there and are
+                        currently working through the customer queue to get everyone approved.
+                     </li>
+                  </ol>
+               </section>
+
+               <section class="docs-section" id="item-2-2">
+                  <h2 class="section-heading">Starting a Tech Check</h2>
+                  <p>
+                     Every tech check begins by initiating a private session with the attendees that are waiting in the
+                     Customer Queue.
+                  </p>
+                  <p>
+                     To initiate a private session begin by <strong>right</strong> clicking (do not left click, that
+                     will prompt you to let them into the room) on the attendee's name that you would like to check.
+                     You'll then click Ok to the prompt asking you if you'd like to begin the private session.
+                  </p>
+                  <p>
+                     Once the private session modal launches, the customer will have be notified and given a 3 second
+                     warning that a tech check is about to begin.
+                  </p>
+                  <img src="./assets/images/customer.gif">
+                  <br>
+                  <p>
+                     <em>Left shows the <strong>Event Tech's</strong> perspective and right shows the
+                        <strong>customer's.</strong></em>
+                  </p>
+               </section>
+               <section class="docs-section" id="item-2-3">
+                  <h2 class="section-heading">Vetting an Attendee</h2>
+                  <p>
+                     Start off the conversation by using the following script:
+                  </p>
+                  <br>
+                  <div class="card bg-primary text-white text-center p-3 mb-3">
+                     <blockquote class="blockquote mb-0">
+                        <em>“Hello [<strong><span class="text-white">attendee name</span></strong>] I am [<strong><span
+                                 class="text-white">event tech name</span></strong>] with tech support. I'm just doing a
+                           quick check on your audio and video before you begin your one-on-one session. Can you hear me
+                           and see me okay?"</em></p>
+                     </blockquote>
+                  </div>
+                  <br>
+                  <p>
+                     Once you've confirmed that you're able to hear and see the attendee and they can hear and see you..
+                  </p>
+                  <br>
+                  <div class="card bg-primary text-white text-center p-3 mb-3">
+                     <blockquote class="blockquote mb-0">
+                        <em>"Okay great! You're all set, don't change anything and your session will be starting
+                           shortly."</em>
+                     </blockquote>
+                  </div>
+                  <br>
+                  <p>You can now click <strong>Approve</strong> and then proceed to exit the Tech Check by clicking
+                     <strong>Close Session</strong>. </p>
+               </section>
+
+               <section class="docs-section" id="item-2-4">
+                  <h2 class="section-heading">Determining a Pass or Fail</h2>
+                  <P>
+                     Like mentioned on the last page, there is a specific set of criteria that the customer has to meet
+                     in order to be considered as <strong>approved</strong> to have their session with the talent.
+                  </P>
+                  <p>
+                     While there are requirements that cannot be looked past, there is a bit of discretion required from
+                     the Event Tech in order to make the final determination wether or not that attendee
+                     <strong>passes</strong> or <strong>fails</strong> a Tech Check.
+                  </p>
+                  <p>
+                     First lets cover the specific criteria that I'm referencing:
+                  </p>
+                  <ul>
+                     <li>You can clearly see the attendee</li>
+                     <li>The attendee can clearly see you </li>
+                     <li>You can clearly hear the attendee </li>
+                     <li>The attendee can clearly hear you </li>
+                  </ul>
+                  <div class="callout-block callout-block-warning">
+                     <div class="content">
+                        <h4 class="callout-title">
+                           <span class="callout-icon-holder mr-1">
                               <i class="fa fa-bullhorn"></i>
-                              </span><!--//icon-holder-->
-                              Warning
-                           </h4>
-                           <P>
-                              No approval can occur until all four of the above questions can be answered with a confident <strong>YES</strong>. 
-                           </P>
-                        </div>
-                        <!--//content-->
+                           </span>
+                           Warning
+                        </h4>
+                        <P>
+                           No approval can occur until all four of the above questions can be answered with a confident
+                           <strong>YES</strong>.
+                        </P>
                      </div>
-                     <!--//callout-block-->
-                     <p>In addition to that, there are circumstances where the answer to those four questions may be yes but the last determining factor of vetting an attendee is assessing the strength of network connection they have throughout your time in the Tech Check with them. Ultimately the question you should be asking yourself to make this call is:</p>
-                     <br>
-                     <br>
-                     <div class="card bg-primary text-white text-center p-3 mb-3">
-                        <blockquote class="blockquote mb-0">
-                           <em>"Can this attendee have a one-to-two minute uninterrupted conversation with the talent without dealing with consistent or frequent audio/video complications?"
-                           </em>                        </blockquote>
-                      </div>
+                  </div>
+                  <p>In addition to that, there are circumstances where the answer to those four questions may be yes
+                     but the last determining factor of vetting an attendee is assessing the strength of network
+                     connection they have throughout your time in the Tech Check with them. Ultimately the question you
+                     should be asking yourself to make this call is:</p>
+                  <br>
+                  <br>
+                  <div class="card bg-primary text-white text-center p-3 mb-3">
+                     <blockquote class="blockquote mb-0">
+                        <em>"Can this attendee have a one-to-two minute uninterrupted conversation with the talent
+                           without dealing with consistent or frequent audio/video complications?"
+                        </em> </blockquote>
+                  </div>
 
-                     <br>
-                     <br>
-                     <p>These connectivity issues are shown in a variety of ways. A customers video could be completely frozen but you can hear them or the video consistently pauses for a few seconds, resumes, and then continues. There is no specific cadence or combination in which these poor connection side effects occur so we cannot anticipate every possibility but we do need to try and identify them when possible and ideally help the attendee fix those when we can. </p>
-                     <p>The best way to think about this decision is to put yourself in the customer's shoes. Would you want to pay $X amount of money to speak with someone you're a fan of only to battle with attempting to understand or hear each other? Probably not. </p>
-                     <p>And then for the talent, do you think it would be enjoyable for someone interacting with a fan to have someone's video be continually freezing or lagging behind the audio? I would assume not. </p>
-                     <p>This isn't always the easiest determination to make at first but you will very quickly pick up on the signs that point to denying someone based on the above factors. </p>
-                  </section>
-               </article>
-               <article class="docs-article" id="section-3">
-                  <h1 class="docs-heading">Troubleshooting<span class="docs-time">Last updated: September 15th, 2020</span></h1>
+                  <br>
+                  <br>
+                  <p>These connectivity issues are shown in a variety of ways. A customers video could be completely
+                     frozen but you can hear them or the video consistently pauses for a few seconds, resumes, and then
+                     continues. There is no specific cadence or combination in which these poor connection side effects
+                     occur so we cannot anticipate every possibility but we do need to try and identify them when
+                     possible and ideally help the attendee fix those when we can. </p>
+                  <p>The best way to think about this decision is to put yourself in the customer's shoes. Would you
+                     want to pay $X amount of money to speak with someone you're a fan of only to battle with attempting
+                     to understand or hear each other? Probably not. </p>
+                  <p>And then for the talent, do you think it would be enjoyable for someone interacting with a fan to
+                     have someone's video be continually freezing or lagging behind the audio? I would assume not. </p>
+                  <p>This isn't always the easiest determination to make at first but you will very quickly pick up on
+                     the signs that point to denying someone based on the above factors. </p>
+               </section>
+            </article>
+            <article class="docs-article" id="section-3">
+               <h1 class="docs-heading">Troubleshooting<span class="docs-time">Last updated: September 15th, 2020</span>
+               </h1>
 
 
-                  <section class="docs-section" id="item-3-1">
-                     <h2 class="section-heading">Basic</h2>
-                     <p>
-                        While most attendees have no issue connecting to a reliable wireless network or getting their audio and video setup correctly, we do run into some people who are a bit less savvy and need some hand holding. Below you'll find some common things we've run into while trying to perform these tech checks.
-                     </p>
-                     <div class="callout-block callout-block-info">
-                        <div class="content">
-                           <h4 class="callout-title">
-                              <span class="callout-icon-holder mr-1">
+               <section class="docs-section" id="item-3-1">
+                  <h2 class="section-heading">Basic</h2>
+                  <p>
+                     While most attendees have no issue connecting to a reliable wireless network or getting their audio
+                     and video setup correctly, we do run into some people who are a bit less savvy and need some hand
+                     holding. Below you'll find some common things we've run into while trying to perform these tech
+                     checks.
+                  </p>
+                  <div class="callout-block callout-block-info">
+                     <div class="content">
+                        <h4 class="callout-title">
+                           <span class="callout-icon-holder mr-1">
                               <i class="fa fa-info-circle"></i>
-                              </span><!--//icon-holder-->
-                              Note
-                           </h4>
-                           <p>
-                              It's important to note that while we will try our best to support an attendee who is having a tough time getting setup but there are only so many things we can attempt before letting the event staff know that alternative arrangements will need to be made for that customer.
-                           </p>
-                        </div>
-                        <!--//content-->
+                           </span>
+                           Note
+                        </h4>
+                        <p>
+                           It's important to note that while we will try our best to support an attendee who is having a
+                           tough time getting setup but there are only so many things we can attempt before letting the
+                           event staff know that alternative arrangements will need to be made for that customer.
+                        </p>
                      </div>
-                  </section>
+                  </div>
+               </section>
 
-                  <section class="docs-section" id="item-3-2">
-                     <h2 class="section-heading">Private Session Never Begins</h2>
-                     <p>
-                        Every tech check begins by initiating a private session with the attendees that are waiting in the Customer Queue. 
-                     </p>
+               <section class="docs-section" id="item-3-2">
+                  <h2 class="section-heading">Private Session Never Begins</h2>
+                  <p>
+                     Every tech check begins by initiating a private session with the attendees that are waiting in the
+                     Customer Queue.
+                  </p>
 
-                     <p>
-                        If you've began a private session but the attendee never joins it could mean a couple things:
-                     </p>
+                  <p>
+                     If you've began a private session but the attendee never joins it could mean a couple things:
+                  </p>
 
-                     <ul>
-                        <li>The attendee has closed this page but they've not yet been removed from the <strong>customer queue</strong>.</li>
-                        <li>The attendee is unable to obtain a strong enough connection to begin the private session.</li>
-                     </ul>
+                  <ul>
+                     <li>The attendee has closed this page but they've not yet been removed from the <strong>customer
+                           queue</strong>.</li>
+                     <li>The attendee is unable to obtain a strong enough connection to begin the private session.</li>
+                  </ul>
 
-                     <p>
-                        Regardless of the reason of why the session won't load the following steps should be followed:
-                     </p>
+                  <p>
+                     Regardless of the reason of why the session won't load the following steps should be followed:
+                  </p>
 
 
-                     <ol>
-                        <li>Move on and continue checking any remaining guests in the queue.</li>
-                        <li>Once you've felt enough time has passed (~5 minutes) attempt to begin another private session with the attendee experiencing issues.</li>
-                        <li>Repeat this process 1 more time if this attempt is unsuccessful.</li>
-                        <li>If after the third attempt a connection can still not be made then please let the Event Staff know that the customer is unable to connect to complete a tech check and an alternative arrangement will need to be made for them.</li>
-                     </ol>
+                  <ol>
+                     <li>Move on and continue checking any remaining guests in the queue.</li>
+                     <li>Once you've felt enough time has passed (~5 minutes) attempt to begin another private session
+                        with the attendee experiencing issues.</li>
+                     <li>Repeat this process 1 more time if this attempt is unsuccessful.</li>
+                     <li>If after the third attempt a connection can still not be made then please let the Event Staff
+                        know that the customer is unable to connect to complete a tech check and an alternative
+                        arrangement will need to be made for them.</li>
+                  </ol>
 
-                     <div class="callout-block callout-block-info">
-                        <div class="content">
-                           <h4 class="callout-title">
-                              <span class="callout-icon-holder mr-1">
+                  <div class="callout-block callout-block-info">
+                     <div class="content">
+                        <h4 class="callout-title">
+                           <span class="callout-icon-holder mr-1">
                               <i class="fa fa-info-circle"></i>
-                              </span><!--//icon-holder-->
-                              Note
-                           </h4>
-                           <p>
-                              Because the attendee cannot connect we have no way to communicate with them so there aren't a lot of options for troubleshooting this issue. 
-                           </p>
-                        </div>
-                        <!--//content-->
+                           </span>
+                           Note
+                        </h4>
+                        <p>
+                           Because the attendee cannot connect we have no way to communicate with them so there aren't a
+                           lot of options for troubleshooting this issue.
+                        </p>
                      </div>
-                     <!--//Callout block-->
-                  </section>
+                  </div>
+               </section>
 
 
-                  <section class="docs-section" id="item-3-3">
-                     <h2 class="section-heading">You can see but not hear the attendee</h2>
-                     <p>
-                        The first thing to note here is that in order to communicate with the attendee you will need to instruct them to use the chat, which will be listed below your video feed on their screen.
-                     </p>
+               <section class="docs-section" id="item-3-3">
+                  <h2 class="section-heading">You can see but not hear the attendee</h2>
+                  <p>
+                     The first thing to note here is that in order to communicate with the attendee you will need to
+                     instruct them to use the chat, which will be listed below your video feed on their screen.
+                  </p>
 
-                     <p>
-                        When attempting to troubleshoot this issue we need to first figure out which device an attendee in order to provide them with the appropriate steps to fix this.
-                     </p>
+                  <p>
+                     When attempting to troubleshoot this issue we need to first figure out which device an attendee in
+                     order to provide them with the appropriate steps to fix this.
+                  </p>
 
-                     <div class="card">
-                        <div class="card-header no-border bg-white pb-0">
-                          <ul class="nav nav-pills card-header-pills lavalamp" id="tab-1" role="tablist">
-                            <li class="nav-item">
-                              <a class="nav-link active" data-toggle="tab" href="#tab-1-1" role="tab" aria-controls="tab-1-1" aria-selected="true">Computer</a>
-                            </li>
-                            <li class="nav-item">
-                              <a class="nav-link" data-toggle="tab" href="#tab-1-2" role="tab" aria-controls="tab-1-2" aria-selected="false">Mobile & Tablet</a>
-                            </li>
-                          </ul>
-                        </div>
-                        <div class="card-body">
-                          <div class="tab-content" id="tab-1-content">
-                            <div class="tab-pane fade show active" id="tab-1-1" role="tabpanel" aria-labelledby="tab-1-1">
+                  <div class="card">
+                     <div class="card-header no-border bg-white pb-0">
+                        <ul class="nav nav-pills card-header-pills lavalamp" id="tab-1" role="tablist">
+                           <li class="nav-item">
+                              <a class="nav-link active" data-toggle="tab" href="#tab-1-1" role="tab"
+                                 aria-controls="tab-1-1" aria-selected="true">Computer</a>
+                           </li>
+                           <li class="nav-item">
+                              <a class="nav-link" data-toggle="tab" href="#tab-1-2" role="tab" aria-controls="tab-1-2"
+                                 aria-selected="false">Mobile & Tablet</a>
+                           </li>
+                        </ul>
+                     </div>
+                     <div class="card-body">
+                        <div class="tab-content" id="tab-1-content">
+                           <div class="tab-pane fade show active" id="tab-1-1" role="tabpanel"
+                              aria-labelledby="tab-1-1">
                               <p>Have the attendee confirm the browser they're using, below are what we recommend:</p>
                               <ul>
                                  <li><strong>macOS (Apple)</strong>: Google Chrome</li>
                                  <li><strong>Windows</strong>: Google Chrome</li>
                               </ul>
                               <p>
-                                 If they are not using a browser recommended for their device the first step would be to close the window they're currently in and open that in the appropriate browser.
+                                 If they are not using a browser recommended for their device the first step would be to
+                                 close the window they're currently in and open that in the appropriate browser.
                               </p>
-                              
+
                               <ul>
-                                 <li><a href="https://support.apple.com/en-in/guide/mac-help/mchlp2567/mac">macOS (Apple)</a></li>
-                                 <li><a href="https://support.microsoft.com/en-us/help/4027981/windows-10-how-to-set-up-and-test-microphones">Windows</a></li>
+                                 <li><a href="https://support.apple.com/en-in/guide/mac-help/mchlp2567/mac">macOS
+                                       (Apple)</a></li>
+                                 <li><a
+                                       href="https://support.microsoft.com/en-us/help/4027981/windows-10-how-to-set-up-and-test-microphones">Windows</a>
+                                 </li>
                               </ul>
-         
+
                               <p>
-                                 Similarly to mobile devices and tablets, you can also have the customer use Online Mic Test to attempt to resolve any audio input woes.
+                                 Similarly to mobile devices and tablets, you can also have the customer use Online Mic
+                                 Test to attempt to resolve any audio input woes.
                               </p>
-                            </div>
-                            <div class="tab-pane fade" id="tab-1-2" role="tabpanel" aria-labelledby="tab-1-2">
+                           </div>
+                           <div class="tab-pane fade" id="tab-1-2" role="tabpanel" aria-labelledby="tab-1-2">
                               <p>Have the attendee confirm the browser they're using, below are what we recommend:</p>
                               <ul>
-                                <li><strong>iOS</strong>: Safari</li>
-                                <li><strong>Android</strong>: Google Chrome</li>
-                             </ul>
-                             <p>
-                                If they are not using a browser recommended for their device the first step would be to close the window they're currently in and open that in the appropriate browser.
-                             </p>
-        
-                             <p>If they are using the correct browser or the issue persists after switching to the correct browser the next thing would be to have them navigate to
-                             </p>
-        
-                             <a href="https://www.vidyard.com/mic-test/" target="_blank">Online Microphone Test</a>
-                             <p>
-                                This website will help them navigate the correct permissions and settings needed to allow microphone access to the browser.
-                             </p>
-        
-                             <p>
-                                You can also attempt to walk them through these steps yourself, but this should only be done if they're unable to correct the issue from Online Mic Test.
-                             </p>
-                             <ul>
-                                <li><a href="https://support.apple.com/en-us/HT203792">
-                                 iOS</a></li>
-                                <li><a href="https://support.google.com/chrome/answer/2693767?co=GENIE.Platform%3DAndroid&hl=en">Android</a></li>
-                             </ul>
-        
-                             <p>
-                                If the customer still cannot get their microphone to work it is advised that we instruct them to attempt on another device. They can close their browser and reload the page on another device with the same link from their confirmation email. 
-                             </p>                            </div>
-                          </div>
+                                 <li><strong>iOS</strong>: Safari</li>
+                                 <li><strong>Android</strong>: Google Chrome</li>
+                              </ul>
+                              <p>
+                                 If they are not using a browser recommended for their device the first step would be to
+                                 close the window they're currently in and open that in the appropriate browser.
+                              </p>
+
+                              <p>If they are using the correct browser or the issue persists after switching to the
+                                 correct browser the next thing would be to have them navigate to
+                              </p>
+
+                              <a href="https://www.vidyard.com/mic-test/" target="_blank">Online Microphone Test</a>
+                              <p>
+                                 This website will help them navigate the correct permissions and settings needed to
+                                 allow microphone access to the browser.
+                              </p>
+
+                              <p>
+                                 You can also attempt to walk them through these steps yourself, but this should only be
+                                 done if they're unable to correct the issue from Online Mic Test.
+                              </p>
+                              <ul>
+                                 <li><a href="https://support.apple.com/en-us/HT203792">
+                                       iOS</a></li>
+                                 <li><a
+                                       href="https://support.google.com/chrome/answer/2693767?co=GENIE.Platform%3DAndroid&hl=en">Android</a>
+                                 </li>
+                              </ul>
+
+                              <p>
+                                 If the customer still cannot get their microphone to work it is advised that we
+                                 instruct them to attempt on another device. They can close their browser and reload the
+                                 page on another device with the same link from their confirmation email.
+                              </p>
+                           </div>
                         </div>
-                      </div>
+                     </div>
+                  </div>
 
-                  </section>
-                  <!--//Section You can see but not hear the attendee-->
+               </section>
 
-                  <section class="docs-section" id="item-3-4">
-                     <h2 class="section-heading">You can hear but not see the attendee</h2>
+               <section class="docs-section" id="item-3-4">
+                  <h2 class="section-heading">You can hear but not see the attendee</h2>
 
-                     <div class="card">
-                        <div class="card-header no-border bg-white pb-0">
-                          <ul class="nav nav-pills card-header-pills lavalamp" id="tab-1" role="tablist">
-                            <li class="nav-item">
-                              <a class="nav-link active" data-toggle="tab" href="#tab-2-1" role="tab" aria-controls="tab-2-1" aria-selected="true">Computer</a>
-                            </li>
-                            <li class="nav-item">
-                              <a class="nav-link" data-toggle="tab" href="#tab-2-2" role="tab" aria-controls="tab-2-2" aria-selected="false">Mobile & Tablet</a>
-                            </li>
-                          </ul>
-                        </div>
-                        <div class="card-body">
-                          <div class="tab-content" id="tab-1-content">
-                            <div class="tab-pane fade show active" id="tab-2-1" role="tabpanel" aria-labelledby="tab-2-1">
+                  <div class="card">
+                     <div class="card-header no-border bg-white pb-0">
+                        <ul class="nav nav-pills card-header-pills lavalamp" id="tab-1" role="tablist">
+                           <li class="nav-item">
+                              <a class="nav-link active" data-toggle="tab" href="#tab-2-1" role="tab"
+                                 aria-controls="tab-2-1" aria-selected="true">Computer</a>
+                           </li>
+                           <li class="nav-item">
+                              <a class="nav-link" data-toggle="tab" href="#tab-2-2" role="tab" aria-controls="tab-2-2"
+                                 aria-selected="false">Mobile & Tablet</a>
+                           </li>
+                        </ul>
+                     </div>
+                     <div class="card-body">
+                        <div class="tab-content" id="tab-1-content">
+                           <div class="tab-pane fade show active" id="tab-2-1" role="tabpanel"
+                              aria-labelledby="tab-2-1">
 
 
                               <p>Have the attendee confirm the browser they're using, below are what we recommend:</p>
@@ -481,183 +536,221 @@
                                  <li><strong>Windows</strong>: Google Chrome</li>
                               </ul>
                               <p>
-                                 If they are not using a browser recommended for their device the first step would be to close the window they're currently in and open that in the appropriate browser.
+                                 If they are not using a browser recommended for their device the first step would be to
+                                 close the window they're currently in and open that in the appropriate browser.
                               </p>
 
                               <p>
-                                 Similarly to mobile devices and tablets, you can also have the customer use Online Webcam Test to attempt to resolve any camera issues. 
+                                 Similarly to mobile devices and tablets, you can also have the customer use Online
+                                 Webcam Test to attempt to resolve any camera issues.
                               </p>
 
                               <a href="https://www.vidyard.com/cam-test/" target="_blank">Online Camera Test</a>
 
                               <p>
-                                 This website will help them navigate the correct permissions and settings needed to allow camera access to the browser.
+                                 This website will help them navigate the correct permissions and settings needed to
+                                 allow camera access to the browser.
                               </p>
 
 
 
                               <p>
-                                 This prompt will appear when the attendee loads the meet and greet web page for the first time. It's important that they select Allow in order for the camera and microphone to be enabled.
+                                 This prompt will appear when the attendee loads the meet and greet web page for the
+                                 first time. It's important that they select Allow in order for the camera and
+                                 microphone to be enabled.
                               </p>
 
-                              <img src="assets/images/allowblock.png">
+                              <img src="./assets/images/allowblock.png">
 
                               <p>
-                                 If the customer mistakingly hit <strong>Block</strong> when they were first prompted to allow access then they can click the camera icon on the far right side of their browser's address bar in order to change those settings and select the correct inputs. 
+                                 If the customer mistakingly hit <strong>Block</strong> when they were first prompted to
+                                 allow access then they can click the camera icon on the far right side of their
+                                 browser's address bar in order to change those settings and select the correct inputs.
                               </p>
                               <p>
-                                 Note that the attendee may need to quit and reload their browser for these changes to take place. 
+                                 Note that the attendee may need to quit and reload their browser for these changes to
+                                 take place.
                               </p>
 
-                              <img src="assets/images/permissions.png">
+                              <img src="./assets/images/permissions.png">
 
                               <p>
-                                 Additionally, the attendee may need to allow Google Chrome access to their camera via the computer's Security & Privacy settings. 
+                                 Additionally, the attendee may need to allow Google Chrome access to their camera via
+                                 the computer's Security & Privacy settings.
                               </p>
 
                               <ul>
-                                 <li><a href="https://support.pitchvantage.com/support/solutions/articles/6000218471-enable-camera-and-microphone-on-my-mac-for-chrome-">macOS (Apple)</a></li>
-                                 <li><a href="https://support.microsoft.com/en-us/help/4468232/windows-10-camera-microphone-and-privacy">Windows</a></li>
+                                 <li><a
+                                       href="https://support.pitchvantage.com/support/solutions/articles/6000218471-enable-camera-and-microphone-on-my-mac-for-chrome-">macOS
+                                       (Apple)</a></li>
+                                 <li><a
+                                       href="https://support.microsoft.com/en-us/help/4468232/windows-10-camera-microphone-and-privacy">Windows</a>
+                                 </li>
                               </ul>
 
 
 
-                            </div>
-                            <div class="tab-pane fade" id="tab-2-2" role="tabpanel" aria-labelledby="tab-2-2">
+                           </div>
+                           <div class="tab-pane fade" id="tab-2-2" role="tabpanel" aria-labelledby="tab-2-2">
 
 
 
                               <p>Have the attendee confirm the browser they're using, below are what we recommend:</p>
                               <ul>
-                                <li><strong>iOS</strong>: Safari</li>
-                                <li><strong>Android</strong>: Google Chrome</li>
-                             </ul>
-                             <p>
-                                If they are not using a browser recommended for their device the first step would be to close the window they're currently in and open that in the appropriate browser.
-                             </p>
-        
-                             <p>If they are using the correct browser or the issue persists after switching to the correct browser the next thing would be to have them navigate to
-                             </p>
-        
-                             <a href="https://www.vidyard.com/cam-test/" target="_blank">Online Microphone Test</a>
-                             <p>
-                                This website will help them navigate the correct permissions and settings needed to allow camera access to the browser.
-                             </p>
-        
-                             <p>
-                                You can also attempt to walk them through these steps yourself, but this should only be done if they're unable to correct the issue from Online Camera Test.
-                             </p>
-                             <ul>
-                                <li><a href="https://www.imore.com/how-manage-privacy-and-security-settings-safari-iphone-and-ipad#camera"></a>iOS</li>
-                                <li><a href="https://support.google.com/chrome/answer/2693767?co=GENIE.Platform%3DAndroid&hl=en"></a>Android</li>
-                             </ul>
-        
-                             <p>
-                                If the customer still cannot get their camera to work it is advised that we instruct them to attempt on another device. They can close their browser and reload the page on another device with the same link from their confirmation email. 
-                             </p>
+                                 <li><strong>iOS</strong>: Safari</li>
+                                 <li><strong>Android</strong>: Google Chrome</li>
+                              </ul>
+                              <p>
+                                 If they are not using a browser recommended for their device the first step would be to
+                                 close the window they're currently in and open that in the appropriate browser.
+                              </p>
+
+                              <p>If they are using the correct browser or the issue persists after switching to the
+                                 correct browser the next thing would be to have them navigate to
+                              </p>
+
+                              <a href="https://www.vidyard.com/cam-test/" target="_blank">Online Microphone Test</a>
+                              <p>
+                                 This website will help them navigate the correct permissions and settings needed to
+                                 allow camera access to the browser.
+                              </p>
+
+                              <p>
+                                 You can also attempt to walk them through these steps yourself, but this should only be
+                                 done if they're unable to correct the issue from Online Camera Test.
+                              </p>
+                              <ul>
+                                 <li><a
+                                       href="https://www.imore.com/how-manage-privacy-and-security-settings-safari-iphone-and-ipad#camera"></a>iOS
+                                 </li>
+                                 <li><a
+                                       href="https://support.google.com/chrome/answer/2693767?co=GENIE.Platform%3DAndroid&hl=en"></a>Android
+                                 </li>
+                              </ul>
+
+                              <p>
+                                 If the customer still cannot get their camera to work it is advised that we instruct
+                                 them to attempt on another device. They can close their browser and reload the page on
+                                 another device with the same link from their confirmation email.
+                              </p>
 
 
 
                            </div>
-                          </div>
                         </div>
-                      </div>
+                     </div>
+                  </div>
 
 
 
 
 
 
-       
-                  </section>
+
+               </section>
 
 
-                  <section class="docs-section" id="item-3-5">
-                     <h2 class="section-heading">The attendee cannot see or hear you</h2>
-                     <p>
-                        If the attendee cannot see you, hear you or any combination of the two there's not any specific settings or configuration troubleshooting that we can advise. 
-                     </p>
+               <section class="docs-section" id="item-3-5">
+                  <h2 class="section-heading">The attendee cannot see or hear you</h2>
+                  <p>
+                     If the attendee cannot see you, hear you or any combination of the two there's not any specific
+                     settings or configuration troubleshooting that we can advise.
+                  </p>
 
-                     <p>
-                        As usual, it's best to confirm that the attendee is using the browser based on our recommendation.
-                     </p>
+                  <p>
+                     As usual, it's best to confirm that the attendee is using the browser based on our recommendation.
+                  </p>
 
-                     <ul>
-                        <li><strong>macOS (Apple)</strong>: Google Chrome</li>
-                        <li><strong>Windows</strong>: Google Chrome</li>
-                        <li><strong>iOS</strong>: Safari</li>
-                        <li><strong>Android</strong>: Google Chrome</li>
-                     </ul>
+                  <ul>
+                     <li><strong>macOS (Apple)</strong>: Google Chrome</li>
+                     <li><strong>Windows</strong>: Google Chrome</li>
+                     <li><strong>iOS</strong>: Safari</li>
+                     <li><strong>Android</strong>: Google Chrome</li>
+                  </ul>
 
-                     <p>
-                        If the issue persists after the attendee is confirmed to be using an appropriate browser or changing to the correct browser doesn't fix the issue we should suggest for them to attempt this on a different device. 
-                     </p>
+                  <p>
+                     If the issue persists after the attendee is confirmed to be using an appropriate browser or
+                     changing to the correct browser doesn't fix the issue we should suggest for them to attempt this on
+                     a different device.
+                  </p>
 
-                     <p>
-                        A computer is always the best option to suggest but we shouldn't deter the attendee from attempting any other device, having them switch from their phone to a tablet or tablet to a computer is usually the easiest route to a resolution and will often time fix the problem. 
-                     </p>
-                  </section>
+                  <p>
+                     A computer is always the best option to suggest but we shouldn't deter the attendee from attempting
+                     any other device, having them switch from their phone to a tablet or tablet to a computer is
+                     usually the easiest route to a resolution and will often time fix the problem.
+                  </p>
+               </section>
 
-                  <section class="docs-section" id="item-3-6">
-                     <h2 class="section-heading">Network connectivity issues</h2>
-                     <p>
-                        When an attendee is experiencing a poor network connection we can only advise and hope they can resolve the issue on their end. 
-                     </p>
+               <section class="docs-section" id="item-3-6">
+                  <h2 class="section-heading">Network connectivity issues</h2>
+                  <p>
+                     When an attendee is experiencing a poor network connection we can only advise and hope they can
+                     resolve the issue on their end.
+                  </p>
 
-                     <h5>If an attendee is connected to WiFi:</h5>
-                     <p>
-                        Suggest that they connect directly to their router with an ethernet cable. If that's not an option have them try and move closer to where their router is located. 
-                     </p>
+                  <h5>If an attendee is connected to WiFi:</h5>
+                  <p>
+                     Suggest that they connect directly to their router with an ethernet cable. If that's not an option
+                     have them try and move closer to where their router is located.
+                  </p>
 
-                     <h5>If an attendee is using a mobile device:</h5>
-                     <p>
-                        Ask them if they are connected to WiFi and if they're not if they're able to connect to a wireless network rather than using their cellular data. 
-                     </p>
+                  <h5>If an attendee is using a mobile device:</h5>
+                  <p>
+                     Ask them if they are connected to WiFi and if they're not if they're able to connect to a wireless
+                     network rather than using their cellular data.
+                  </p>
 
-                     <p>
-                        When an attendee makes a change to their network connection you'll need to close the session, give them time to make that change, and then re-attempt the tech check after some time has passed. 
-                     </p>
-                  </section>
+                  <p>
+                     When an attendee makes a change to their network connection you'll need to close the session, give
+                     them time to make that change, and then re-attempt the tech check after some time has passed.
+                  </p>
+               </section>
 
-                  <section class="docs-section" id="item-3-7">
-                     <h2 class="section-heading">Nothing is working, what do I do?</h2>
-                     <p>
-                        If after multiple attempts and different routes of troubleshooting have been attempted and we can still not resolve an issue with an attendee we need to make sure that the event staff is aware. 
-                     </p>
-                     <p>
-                        Post a brief message in the host chat letting the event staff know of the situation, something like this is a good example:
-                     </p>
+               <section class="docs-section" id="item-3-7">
+                  <h2 class="section-heading">Nothing is working, what do I do?</h2>
+                  <p>
+                     If after multiple attempts and different routes of troubleshooting have been attempted and we can
+                     still not resolve an issue with an attendee we need to make sure that the event staff is aware.
+                  </p>
+                  <p>
+                     Post a brief message in the host chat letting the event staff know of the situation, something like
+                     this is a good example:
+                  </p>
 
-                     <br>
-
-
-                     <div class="card bg-primary text-white text-center p-3 mb-3">
-                        <blockquote class="blockquote mb-0">
-                           <em>
-                              Hey, [<strong><span class="text-white">event staff name</span> </strong>] - [<strong><span class="text-white">attendee first + last name</span></strong>] is having issues connecting due to the strength of their network. I've attempted to troubleshoot this a number of times now and it doesn't seem to be helping or getting better. At this point it would be best to offer an alternative solution for them. Let me know if you have any questions</em>                   </blockquote>
-                      </div>
-
-                     
-
-                     <br>
-                     <p>
-                        There are simply some attendees we are not going to be able to accommodate and have to make that determination after we've given a reasonable amount of effort towards trying to help them. 
-                     </p>
-
-                  </section>
+                  <br>
 
 
-               </article>
-            </div>
+                  <div class="card bg-primary text-white text-center p-3 mb-3">
+                     <blockquote class="blockquote mb-0">
+                        <em>
+                           Hey, [<strong><span class="text-white">event staff name</span> </strong>] - [<strong><span
+                                 class="text-white">attendee first + last name</span></strong>] is having issues
+                           connecting due to the strength of their network. I've attempted to troubleshoot this a number
+                           of times now and it doesn't seem to be helping or getting better. At this point it would be
+                           best to offer an alternative solution for them. Let me know if you have any questions</em>
+                     </blockquote>
+                  </div>
+
+
+
+                  <br>
+                  <p>
+                     There are simply some attendees we are not going to be able to accommodate and have to make that
+                     determination after we've given a reasonable amount of effort towards trying to help them.
+                  </p>
+
+               </section>
+
+
+            </article>
          </div>
       </div>
-      <!--//docs-wrapper-->
-      <!-- Javascript -->          
-      <script src="assets/plugins/jquery-3.4.1.min.js"></script>
-      <script src="assets/plugins/popper.min.js"></script>
-      <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>  
-      <!-- Page Specific JS -->
-      <script src="assets/plugins/jquery.scrollTo.min.js"></script>
-      <script src="assets/js/docs.js"></script> 
-   </body>
+   </div>
+   <script src="assets/plugins/jquery-3.4.1.min.js"></script>
+   <script src="assets/plugins/popper.min.js"></script>
+   <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+   <script src="assets/plugins/jquery.scrollTo.min.js"></script>
+   <script src="assets/js/docs.js"></script>
+</body>
+
 </html>
