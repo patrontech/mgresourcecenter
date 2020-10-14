@@ -53,21 +53,16 @@ $(document).ready(function() {
 		
 	});
 	
-	/* wmooth scrolling on page load if URL has a hash */
+	/* Smooth scrolling on page load if URL has a hash */
 	if(window.location.hash) {
 		var urlhash = window.location.hash;
 		$('body').scrollTo(urlhash, 800, {offset: -69, 'axis':'y'});
 	}
 	
 	
-	/* Bootstrap lightbox */
-    /* Ref: http://ashleydw.github.io/lightbox/ */
 
-    $(document).delegate('*[data-toggle="lightbox"]', 'click', function(e) {
-        e.preventDefault();
-        $(this).ekkoLightbox();
-    }); 
 
+    
     
     
 
