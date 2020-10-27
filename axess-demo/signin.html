@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="android.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="content">
+            <section class="hero">
+                <img class="logo android" src="logo.png" />
+            </section>
+
+            <section class="sign-in">
+                <form action="submit"><input required type="email" placeholder="email@email.com" class="email">
+                    <input required type="password" placeholder="password" class="password">
+                    <input type="submit" class="sign-in-btn" id="page1" value="Sign In"></form>
+            </section>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script>
+        $("#response").load("signin.html");
+        $("#page1").click(function () {
+            // load home page on click
+            $("#response").load("selectevents.html");
+        });
+        $("#page2").click(function () {
+            // load about page on click
+            $("#response").load("selectevents.html");
+        });
+        $("#page3").click(function () {
+            // load contact form onclick
+            $("#response").load("page3.html");
+        });
+        });
+    </script>
+</body>
+
+</html>

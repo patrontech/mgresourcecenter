@@ -2,8 +2,9 @@
 
 <head>
     <title>ShowClix | Axess Scanning Demo</title>
+
     <link rel="stylesheet" type="text/css" href="/axess-demo/screen.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="android.css" />
 </head>
 
 <body>
@@ -16,20 +17,8 @@
     </div>
     <div class="body">
         <div class="left">
-            <img width="125" src="https://www.showclix.com/assets/marketing/product-demos/img/logo.png">
-            <div id="message-container" style="display: block;">
-                <div id="message">
-                    <h2>Welcome!</h2>
-                    <div class="ps" style="display: block;">
-                        <p>Welcome to the Axess Scanning Demo!</p>
-                        <p>In this demo, we'll learn how to start scanning tickets with ShowClix's app, Axess.</p>
-                        <p>Now click <b>Begin</b> and let's get started.</p>
-                        <div id="play" class="control">BEGIN</div>
-                    </div>
-                </div>
-            </div>
 
-            <div id="timer"></div>
+            <button id="page1">Next Page</button>
 
         </div>
 
@@ -37,61 +26,37 @@
             <div class="iphone-container" style="display: block;">
                 <img src="u9000.svg" />
 
-                <div class="screen">
-                    <video id="video" muted="">
-                        <!-- hello iOS, Safari and IE9 -->
-                        <source src="https://www.showclix.com/assets/marketing/product-demos/video/axess_demo.mp4"
-                            type="video/mp4">
-                        <!-- Hello Firefox and Opera -->
-                        Your browser does not support the Axess Scanning Demo.
-                        <!-- Hello legacy -->
-                        Your browser does not support the <code>video</code> element.
-                    </video>
 
-                    <!-- CONTROLS -->
-                    <div id="sign_in" class="button next">
-                        Sign In
+                <div class="screen">
+                    <div id="response">
+
                     </div>
-                    <div id="radio_btn_checked">
-                    </div>
-                    <div id="showclix_party">
-                    </div>
-                    <div id="online_special">
-                    </div>
-                    <div id="radio_btn_unchecked">
-                    </div>
-                    <div id="dismiss">
-                    </div>
-                    <div id="download_tickets" class="button next">
-                        Download Tickets
-                    </div>
-                    <div id="make_selection" class="button next">
-                        Make selection
-                    </div>
-                    <div id="launch_scanner" class="button next">
-                        Launch Scanner
-                    </div>
+
                 </div>
+
             </div>
         </div>
     </div>
-    <script src="/axess-demo/axess-demo.js"></script>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 
-    <!-- <script>
-        var canvas = document.getElementById('myCanvas');
-        var ctx = canvas.getContext('2d');
-        var phone = new Image();
-        var screen2 = new Image();
-
-        //iphone shell
-        phone.onload = function () {
-            ctx.drawImage(phone, 0, 0, 350.5, 705);
-        };
-        phone.src = 'device.png';
-    </script> -->
-
-
-
+    <script>    $(document).ready(function () {
+            // load index page when the page loads
+            $("#response").load("signin.html");
+            $("#page1").click(function () {
+                // load home page on click
+                $("#response").load("selectevents.html");
+            });
+            $("#page2").click(function () {
+                // load about page on click
+                $("#response").load("selectevents.html");
+            });
+            $("#page3").click(function () {
+                // load contact form onclick
+                $("#response").load("page3.html");
+            });
+        });
+    </script>
 </body>
 
 </html>

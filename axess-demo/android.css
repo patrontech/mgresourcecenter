@@ -1,0 +1,227 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+    vertical-align: baseline;
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+
+.wrapper {
+    width: 355px;
+    background-color: #2772b8;
+    height: 650px;
+    margin: auto;
+    text-align: start;
+}
+
+input {
+    border: 0;
+    width: 100%;
+    height: 2.5rem;
+    padding: 0 0 0.25rem 0;
+    font-size: 1rem;
+    color: #555555;
+    box-sizing: border-box;
+}
+
+input.email {
+    margin-bottom: .25rem;
+}
+
+ input.sign-in-btn {
+     margin-top: .5rem;
+ }
+
+ .email, .password { 
+    padding: 4px;
+    font-size: 13px;
+ }
+
+.sign-in-btn {
+    background-color: #55ADE1;
+    color: #fff;
+    width: 100%;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    cursor: crosshair;
+
+}
+
+.logo {
+    width: 50%;
+    margin-top: 50%;
+    margin-bottom: 20%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.header-logo {
+    margin: 0;
+    width: 8%;    
+    display: inline;
+    top: 14px;
+    position: relative;
+    margin-left: 10px;
+}
+
+.content {
+    width: 90%;
+    margin: auto;
+    text-align: center;
+}
+
+.select { 
+    width: 100%;
+    margin: auto;
+    text-align: start;
+}
+
+.header {
+    height: 66px;
+    background-color: #fff;
+    width: 100%;
+    display: inline-block;
+    border-bottom: #2b2b2b 2px solid;
+    color: #55AEE0;
+
+
+}
+
+ 
+.header h1 {
+    display: inline-block;
+    position: relative;
+    top: 2px;
+    margin-left: 6px;
+    text-transform: uppercase;
+}
+
+.far { 
+    margin-left: 89%;
+    position: relative;
+    display: inline-block;
+    top:-15px;
+    font-size: 20px;
+}
+
+.event { 
+    background-color: white;    
+    color: grey;
+    height: 78px;
+    border-bottom: 1px solid lightgray;
+}
+
+.details {
+    float:left;
+    margin-top: 1.5%;
+    position: relative;
+    padding-left: 6px;
+}
+
+.details h1, .details p {
+    padding-top:5px;
+    font-size: 12px;
+}
+
+.event-name {
+    font-weight: 600;
+    color: #2b2b2b;
+    font-size: 14px;
+}
+
+
+.datetime  {
+    color: black;
+}
+
+.venue {
+    color: #929292;
+}
+
+.round {
+  position: relative;
+  float: right;
+  margin-top: 7%;
+}
+
+.round label {
+  background-color: #fff;
+  border: 1px solid #2772b8;
+  border-radius: 50%;
+  cursor: pointer;
+  height: 20px;
+  left: -35px;
+  position: absolute;
+  top: 0;
+  width: 20px;
+}
+
+.round label:after {
+  border: 2px solid #fff;
+  border-top: none;
+  border-right: none;
+  content: "";
+  height: 5px;
+  left: 4px;
+  opacity: 0;
+  position: absolute;
+  top: 5px;
+  transform: rotate(-45deg);
+  width: 10px;
+}
+
+.round input[type="checkbox"] {
+  visibility: hidden;
+}
+
+.round input[type="checkbox"]:checked + label {
+  background-color: #2772b8;
+  border-color: #fff;
+}
+
+.round input[type="checkbox"]:checked + label:after {
+  opacity: 1;
+}
+
+.download {
+    position: relative;
+    bottom: 50;
+    height: 70px;
+    background-color: #2772b8;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
