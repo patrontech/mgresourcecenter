@@ -1,36 +1,75 @@
 jQuery(document).ready(function ($) {
 
-	var form = $('#form-customize'),
+	var form = $('#form-customize')
 		contract = $('#contract');
 
-	form.on('submit', function (e) {
-		e.preventDefault();
+// 	// form.on('submit', function (e) {
+// 	// 	e.preventDefault();
 
-		// Copy the required stuff (style and encoding)
-		$('.inc_pdf').clone().addClass('temporary').prependTo('#contract');
+// 	// 	// Copy the required stuff (style and encoding)
+// 	// 	$('.inc_pdf').clone().addClass('temporary').prependTo('#contract');
 
-		// Get the outerHTML
-		var html = document.querySelector("#contract")
-		
+// 	// 	// Get the outerHTML
+		var html = contract.prop('outerHTML');
 
-		/**
-		 * Save to PDF
-		 * https://github.com/MrRio/jsPDF
-		 * http://stackoverflow.com/a/24825130
-		 */
-		var doc = new jsPDF();
-		doc.fromHTML(
-			html,
-			15,
-			15, {
-				'width': 180		});
+// 	// 	/**
+// 	// 	 * Save to PDF
+// 	// 	 * https://github.com/MrRio/jsPDF
+// 	// 	 * http://stackoverflow.com/a/24825130
+// 	// 	 */
+// 	// 	var doc = new jsPDF();
+// 	// 	doc.fromHTML(
+// 	// 		html,
+// 	// 		15,
+// 	// 		15, {
+// 	// 			'width': 180		});
 
-		// Remove the files we appended earlier on (to restore the screen style)
-		contract.find('.temporary').remove();
+// 	// 	// Remove the files we appended earlier on (to restore the screen style)
+// 	// 	contract.find('.temporary').remove();
 
-		// Open PDF in new window
-		// doc.output('dataurlnewwindow');
-		doc.save('my.pdf');
+// 	// 	// Open PDF in new window
+// 	// 	// doc.output('dataurlnewwindow');
+// 	// 	doc.save('my.pdf');
+// 	// });
+
+
+// });
+
+// var doc = new jsPDF();
+
+// 	var elements = {
+//     	'#editor': function (element, renderer) {
+//         	return true;
+//     	}
+// 	};
+
+// 	$('#cmd').click(function (e) { 
+//  e.preventDefault();
+
+//     	doc.fromHTML($('#contract').html(), 15, 15, {
+//         	'width': 170,
+//             'elementHandlers': elements
+//     	});
+//     	doc.save('demo.pdf');
+// 	});
+
+$("#cmd").click(function(e) {
+		 e.preventDefault();
+
+	
+        html2canvas(document.getElementById("content"), {
+            onrendered: function(canvas) {
+
+                var imgData = canvas.toDataURL('image/png');
+                console.log('Report Image URL: '+imgData);
+                var doc = new jsPDF('p', 'mm', [612, 792]); //210mm wide and 297mm high
+                
+				doc.addImage(imgData, 'PNG', 15, 10
+				);
+                doc.save('sample.pdf');
+            }
+        });
+
 	});
 
 
