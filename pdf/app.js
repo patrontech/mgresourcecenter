@@ -62,9 +62,9 @@ $("#cmd").click(function(e) {
 
                 var imgData = canvas.toDataURL('image/png');
                 console.log('Report Image URL: '+imgData);
-                var doc = new jsPDF('p', 'mm', [612, 792]); //210mm wide and 297mm high
+                var doc = new jsPDF('p', 'mm', [612, 792]); 
                 
-				doc.addImage(imgData, 'PNG', 15, 10
+				doc.addImage(imgData, 'PNG', 5, 5
 				);
                 doc.save('sample.pdf');
             }
