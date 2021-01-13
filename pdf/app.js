@@ -119,8 +119,14 @@ $("#cmd").click(function(e) {
 
 
 
-	var qrcode = new QRCode("qrcode");
-
+var qrcode = new QRCode(document.getElementById("qrcode"), {
+	text: '',
+	width: 150,
+	height: 150,
+	colorDark : "#000000",
+	colorLight : "#ffffff",
+	correctLevel : QRCode.CorrectLevel.H
+});
 	function makeCode () {		
 		var elText = document.getElementById("email");
 		var elPass = document.getElementById("password");
@@ -138,17 +144,15 @@ $("#cmd").click(function(e) {
 	$(".input").
 		on("blur", function () {
 			makeCode();
+			$("#qrcode").show();
+
 		});
+	
 	on("keydown", function (e) {
-	if (e.keyCode == 13) {
-	makeCode();
-	}
+		if (e.keyCode == 13) {
+		makeCode();
+		}
 	});
-		on("keydown", function (e) {
-	if (e.keyCode == 13) {
-	makeCode();
-	}
-		});
 	
 	$(".cmd").click(makeCode);
 

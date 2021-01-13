@@ -5,8 +5,10 @@
 */
 
 #qrcode {
-	width: 25%;
+	display:none;
 }
+
+
 .container {
 	margin-left: 5%!important;
 	margin-right: 5%!important;
