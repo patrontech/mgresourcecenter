@@ -62,7 +62,7 @@ $("#cmd").click(function(e) {
 
                 var imgData = canvas.toDataURL('image/png');
                 console.log('Report Image URL: '+imgData);
-                var doc = new jsPDF('p', 'mm', [612, 792]); 
+                var doc = new jsPDF('p', 'mm', 'letter'); 
                 
 				doc.addImage(imgData, 'PNG', 5, 5
 				);
@@ -117,4 +117,33 @@ $("#cmd").click(function(e) {
 		}
 	}
 
+
+
+	var qrcode = new QRCode("qrcode");
+
+	function makeCode () {		
+	var elText = document.getElementById("email");
+
+	if (!elText.value) {
+	elText.focus();
+	return;
+	}
+
+	qrcode.makeCode(elText.value);
+	}
+
+	makeCode();
+
+	$("#email").
+	on("blur", function () {
+	makeCode();
+	}).
+	on("keydown", function (e) {
+	if (e.keyCode == 13) {
+	makeCode();
+	}
+	});
+
 });
+
+

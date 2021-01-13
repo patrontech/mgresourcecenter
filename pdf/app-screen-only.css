@@ -4,24 +4,51 @@
 * For details, see http://www.apache.org/licenses/LICENSE-2.0.
 */
 
+#qrcode {
+	width: 25%;
+}
+.container {
+	margin-left: 5%!important;
+	margin-right: 5%!important;
+}
+
+.logo {
+	width: 30%;
+}
+
+.section {
+	margin-bottom: 2em;
+}
+
+ol, ul {
+	margin: 1.5em 0 1.5em;
+}
+
+p {
+	margin: .75em 0 .75em 0;
+}
+
 /* Toggle Styles */
+
 
 h2 {
 	font-weight: 600;
 	color: #1068A9;
-	padding-bottom: .25em;
-	font-size: 2em;
+	font-size: 3rem;
+	margin-bottom: .75em;
 }
 
 h3 {
-	font-size: 1.70em;
+	font-size: 1.50rem;
 	font-weight: 500;
 	color: #C1CCD8;
+	padding-bottom: 1em;
 }
 
 h4 {
-	font-size: 1.20em;
+	font-size: 1.75rem;
 	font-weight: 600;
+	margin-bottom: .9em;
 }
 
 
@@ -30,9 +57,9 @@ h4,h5 {
 }
 
 
-p {
+p,ol,ul {
 	color: #657381;
-	font-size: .9em;
+	font-size: 1.5rem;
 }
 
 .sidebar-description {
@@ -63,7 +90,7 @@ p {
 	z-index: 1000;
 	position: fixed;
 	left: 380;
-	width: 10px;
+	width: 380px;
 	height: 100%;
 	margin-left: -380px;
 	overflow-y: auto;

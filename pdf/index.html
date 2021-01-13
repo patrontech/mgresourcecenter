@@ -40,31 +40,26 @@
 						<div class="col-lg-12 col-md-4 col-sm-4">
 							<div class="form-group">
 								<label class="sr-only">Email Address</label>
-								<input class="form-control" type="text" name="customername" placeholder="Email Address"
-									required>
+								<input class="form-control" type="text" name="customername" id="email"
+									placeholder="Email Address" required>
 							</div>
 
 						</div>
 						<div class="col-lg-12 col-md-4 col-sm-4">
 							<div class="form-group">
 								<label class="sr-only">Password</label>
-								<input class="form-control" type="text" name="address" placeholder="Password" required>
+								<input class="form-control" type="text" name="address" id="password"
+									placeholder="Password" required>
 							</div>
 						</div>
-						<div class="col-lg-4 hidden-md hidden-sm">
-							<div class="form-group">
-								<!-- https://www.filepicker.com/documentation/file_ingestion/widgets/pick -->
-								<label class="sr-only">Upload QR Code</label>
-								<input type="filepicker" data-fp-button-class="btn btn-success" name="logo"
-									data-fp-button-text="Upload QR Code" data-fp-extensions=".png,.jpg,.jpeg,.gif">
-							</div>
-						</div>
+
 
 
 					</div>
 			</div>
-			<button type="submit" id="cmd" class="btn btn-primary btn-lg btn-block" style="border-radius:
-				0; ">Save as PDF <span class=" glyphicon glyphicon-download-alt" aria-hidden="true"></span></button>
+			<button type="submit" id="cmd" class="btn btn-primary btn-lg btn-block" style="border-radius:0; ">
+				Save as PDF
+				<span class=" glyphicon glyphicon-download-alt" aria-hidden="true"></span></button>
 			<input id="input-html" type="hidden" name="html" value="">
 			</form>
 
@@ -82,169 +77,159 @@
 
 
 
-
 						<div class="row">
 							<div class="col">
 
 
 
-								<h2>
-									Device Setup
-								</h2>
+								<img src="img/patron-logo-black.png" class="logo">
 
 
-								<p>
-									Press and hold the button on the top left side of your device to power it on.
-								</p>
-
-								<h4>
-									WiFi and Timezone
-								</h4>
-
-								<p>Connect the device to WiFi and set the timezone by pressing the three dots on the top
-									right
-									corner of the screen.</p>
+								<div class="section">
+									<h2>
+										Device Setup
+									</h2>
 
 
-								<h2>Login Credentials</h2>
+									<p>
+										Press and hold the button on the top left side of your device to power it on.
+									</p>
 
-								<H4>Username:</h4>
-								<span class="item customername"> email address</span>
+									<h4>
+										WiFi and Timezone
+									</h4>
 
-								<h4>Password:</h4>
-								<span class="item address">password</span>
+									<p>Connect the device to WiFi and set the timezone by pressing the three dots on the
+										top
+										right
+										corner of the screen.</p>
+								</div>
 
-								<p>
-									Launch Axess to login with the credentials listed below. Or, scan the QR code
-									pictured below.
-								</p>
+								<div class="section">
+									<h2>Login Credentials</h2>
 
+									<h4>Username:</h4>
+									<span class="item customername"> email address</span>
 
+									<h4>Password:</h4>
+									<span class="item address">password</span>
 
+									<p>
+										Launch Axess to login with the credentials listed below. Or, scan the QR code
+										pictured below.
+									</p>
 
+									<div id="qrcode"></div>
 
-								<h2>
-									Axess Setup
-								</h2>
-								<hr>
-								<h4>
-									1. Select Events
-								</h4>
-								<p>
-									Select your event(s) press Download Tickets for [x] Events.
-								</p>
-
-								<p>
-									Tip: Filter and mass select events by tapping the checkmark on the top right corner
-									of the
-									screen.
-								</p>
-								<h4>
-									2. Filter Price Levels
-								</h4>
-								<p>
-									Choose the event(s), then deselect any price levels that should not be valid on your
-									device.
-									Press Make Selection press Done.
-								</p>
-								<h4>
-									3. Start Scanning
-								</h4>
-								<p>
-									Press Device Setup to restart this process.
-								</p>
-
-							</div>
-
-						</div>
+								</div>
 
 
+								<div class="section">
 
+									<h2>
+										Axess Setup
+									</h2>
+									<h4>
+										1. Select Events
+									</h4>
+									<p>
+										Select your event(s) press Download Tickets for [x] Events.
+									</p>
 
-					</div><!-- /#contract -->
-					<div id="">
-
-
-
-
-						<div class="row">
-							<div class="col">
+									<p>
+										Tip: Filter and mass select events by tapping the checkmark on the top right
+										corner
+										of the
+										screen.
+									</p>
+									<h4>
+										2. Filter Price Levels
+									</h4>
+									<p>
+										Choose the event(s), then deselect any price levels that should not be valid on
+										your
+										device.
+										Press Make Selection press Done.
+									</p>
+									<h4>
+										3. Start Scanning
+									</h4>
+									<p>
+										Press Device Setup to restart this process.
+									</p>
+								</div>
 
 
 
-								<h2>
-									Scanning Tickets </h2>
 
 
-								<p>
-									There are two ways to scan ticket barcodes or QR codes. Laser scanning, our
-									preferred method, is better for battery
-									life, speed, and performance. </p>
-
-								<h4>
-									Camera: </h4>
-								<ol>
-									<li>From the main menu, tap Launch Scanner</li>
-									<li>Position the ticket's QR code inside the center of the white box on the
-										camera's viewfinder.</li>
-									<li>Hold the ticket's barcode 6-8" from the scanner. If positioned correctly,
-										the scan will automatically happen.</li>
-								</ol>
-								<h4>
-									Laser: </h4>
-								<ol>
-									<li>From the main menu, tap Launch Scanner</li>
-									<li>Ready to scan will display on the4 screen.</li>
-									<li>Hold the barcode 6-8" from the scanner. Press and hold any of the4 scan buttons
-										until the laser has read the barcode</li>
-								</ol>
 
 
-								<h2>Scanner Responses</h2>
 
-								<H5>Valid</h5>
-								<p>The ticket is valid for one person and has been successfully scanned.</p>
-								<ol>
-									<li><strong>Ticket Not Found</strong> - The ticket is not recognized for the
-										event(s) downloaded on
-										theTicket is Voided
-									<li><strong>Ticket Voided</strong> - he ticket has been voided.</li>
-									<li><strong>Ticket Type Invalid</strong> - The ticket is for a price level that the
-										device is not
-										configured to accept.</li>
-									<li><strong>Ticket Already Scanned In</strong> - The ticket is already checked in
-										for
-										the event</li>
+
+								<div class="section">
+									<h2>
+										Scanning Tickets </h2>
+
+
+									<p>
+										There are two ways to scan ticket barcodes or QR codes. Laser scanning, our
+										preferred method, is better for battery
+										life, speed, and performance. </p>
+
+									<h4>
+										Camera: </h4>
+									<ol>
+										<li>From the main menu, tap Launch Scanner</li>
+										<li>Position the ticket's QR code inside the center of the white box on the
+											camera's viewfinder.</li>
+										<li>Hold the ticket's barcode 6-8" from the scanner. If positioned correctly,
+											the scan will automatically happen.</li>
+									</ol>
+									<h4>
+										Laser: </h4>
+									<ol>
+										<li>From the main menu, tap Launch Scanner</li>
+										<li>Ready to scan will display on the4 screen.</li>
+										<li>Hold the barcode 6-8" from the scanner. Press and hold any of the4 scan
+											buttons
+											until the laser has read the barcode</li>
+									</ol>
+								</div>
+
+
 
 								</ol>
 
-								<H5>Searching for Customers</h5>
-								<p>The ticket is valid for one person and has been successfully scanned.</p>
-								<ul>
-									<li>From the Ready to Scan screen click the search icon.</li>
-									<li>Search by customer name or confirmation number.</li>
-									<li>Ticket Type Invalid- The ticket is for a price level that the device is not
-										configured to accept.</li>
-									<li>Tap the customer’s name, select Check In All or Check In each ticket
-										individually.</li>
-								</ul>
+								<div class="section">
+									<h2>Searching for Customers</h2>
+									<p>The ticket is valid for one person and has been successfully scanned.</p>
+									<ul>
+										<li>From the Ready to Scan screen click the search icon.</li>
+										<li>Search by customer name or confirmation number.</li>
+										<li>Ticket Type Invalid- The ticket is for a price level that the device is not
+											configured to accept.</li>
+										<li>Tap the customer’s name, select Check In All or Check In each ticket
+											individually.</li>
+									</ul>
 
 
-								<p>
-									Launch Axess to login with the credentials listed below. Or, scan the QR code
-									pictured below.
-								</p>
+									<p>
+										Launch Axess to login with the credentials listed below. Or, scan the QR code
+										pictured below.
+									</p>
+								</div>
 
 
-							</div>
+							</div><!-- /#contract -->
 
 
 
 
-						</div><!-- /#contract -->
+						</div><!-- /.container -->
 						<div id="editor"></div>
 
-					</div><!-- /.container -->
+					</div><!-- /.page-content -->
 				</div>
 			</div>
 
@@ -263,6 +248,7 @@
 		integrity="sha512-ToRWKKOvhBSS8EtqSflysM/S7v9bB9V0X3B1+E7xo7XZBEZCPL3VX5SFIp8zxY19r7Sz0svqQVbAOx+QcLQSAQ=="
 		crossorigin="anonymous"></script>
 	<script src="app.js"></script>
+	<script src="vendor/qrcode.min.js"></script>
 
 </body>
 
