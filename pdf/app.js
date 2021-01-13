@@ -135,15 +135,22 @@ $("#cmd").click(function(e) {
 
 	makeCode();
 
-	$("#password").
-	on("blur", function () {
-	makeCode();
-	}).
+	$(".input").
+		on("blur", function () {
+			makeCode();
+		});
 	on("keydown", function (e) {
 	if (e.keyCode == 13) {
 	makeCode();
 	}
 	});
+		on("keydown", function (e) {
+	if (e.keyCode == 13) {
+	makeCode();
+	}
+		});
+	
+	$(".cmd").click(makeCode);
 
 });
 
