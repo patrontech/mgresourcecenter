@@ -122,19 +122,20 @@ $("#cmd").click(function(e) {
 	var qrcode = new QRCode("qrcode");
 
 	function makeCode () {		
-	var elText = document.getElementById("email");
+		var elText = document.getElementById("email");
+		var elPass = document.getElementById("password");
 
 	if (!elText.value) {
 	elText.focus();
 	return;
 	}
 
-	qrcode.makeCode(elText.value);
+	qrcode.makeCode("CRED|" + elText.value + "|" + elPass.value);
 	}
 
 	makeCode();
 
-	$("#email").
+	$("#password").
 	on("blur", function () {
 	makeCode();
 	}).
