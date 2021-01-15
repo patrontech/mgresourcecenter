@@ -80,7 +80,7 @@ select {
 }
 
 select {
-  width: 100%;
+  width: 100%!important;
 }
 input[type="radio"] + label:first-of-type {
   border-top-left-radius: 3px;
