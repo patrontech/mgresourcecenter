@@ -13,17 +13,18 @@
 
 <body>
     <div class="container">
-        <form>
+        <form action="https://webhook.site/82612b14-afc9-4644-ac99-0e18632ead96" method="POST">
+
             <div class="row">
                 <h4>Event Operations Manager</h4>
                 <div class="input-group"><label for="eopsmgr"></label>
-                    <select name="eopsmgr" id="eopsmgr" value="">
+                    <select name="eopsmgr" id="eopsmgr" value="" required>
                         <option selected hidden>Choose here</option>
-                        <option>Sam Smith</option>
-                        <option>Mike Meehan</option>
-                        <option>Marilyn Beltran</option>
-                        <option>Derek Dictter</option>
-                        <option>Wolf</option>
+                        <option name="sam">Sam Smith</option>
+                        <option name="mike">Mike Meehan</option>
+                        <option name="marilyn">Marilyn Beltran</option>
+                        <option name="derek">Derek Dictter</option>
+                        <option name="wolf">Wolf</option>
 
                     </select>
                 </div>
@@ -33,29 +34,29 @@
             <div class="row">
                 <h4>Event Details</h4>
                 <div class="input-group input-group-icon">
-                    <input type="text" placeholder="Event" />
+                    <input type="text" name="event" placeholder="Event" required />
                     <div class="input-icon"><i class="fa fa-users"></i></div>
                 </div>
                 <div class="input-group input-group-icon">
-                    <input type="text" placeholder="City" />
+                    <input type="text" name="city" placeholder="City" required />
                     <div class="input-icon"><i class="fa fa-city"></i></div>
                 </div>
                 <div class="input-group input-group-icon">
-                    <input type="email" placeholder="State" />
+                    <input type="text" name="state" placeholder="State" required />
                     <div class="input-icon"><i class="fa fa-map"></i></div>
                 </div>
                 <div class="col-half">
                     <h5>Event Start</h5>
                     <div class="input-group">
-                        <input type="date" id="start" name="trip-start" value="2021-01-01" min="2021-01-01"
-                            max="2021-12-31">
+                        <input type="date" id="start" name="event-start" value="2021-01-01" min="2021-01-01"
+                            max="2021-12-31" required>
                     </div>
                 </div>
                 <div class="col-half">
                     <h5>Event End</h5>
                     <div class="input-group">
-                        <input type="date" id="start" name="trip-start" value="2021-01-01" min="2021-01-01"
-                            max="2021-12-31">
+                        <input type="date" id="start" name="event-end" value="2021-01-01" min="2021-01-01"
+                            max="2021-12-31" required>
                     </div>
                 </div>
             </div>
@@ -63,20 +64,20 @@
                 <h4>Contractor Information</h4>
                 <div class="row">
                     <div class="col-half input-group input-group-icon">
-                        <input type="text" placeholder="First Name" />
+                        <input name="first-name" type="text" placeholder="First Name" required />
                         <div class="input-icon"><i class="fa fa-user"></i></div>
                     </div>
                     <div class="col-half input-group input-group-icon">
-                        <input type="text" placeholder="Last Name" />
+                        <input name="last-name" type="text" placeholder="Last Name" required />
                         <div class="input-icon"><i class="fa fa-user"></i></div>
                     </div>
                 </div>
                 <div class="input-group input-group-icon">
-                    <input type="email" placeholder="Email Adress" />
+                    <input name="email" type="email" placeholder="Email Adress" required />
                     <div class="input-icon"><i class="fa fa-envelope"></i></div>
                 </div>
                 <div class="input-group input-group-icon">
-                    <input type="email" placeholder="Home Adress" />
+                    <input name="home-address" type="text" placeholder="Home Adress" required />
                     <div class="input-icon"><i class="fa fa-home"></i></div>
                 </div>
 
@@ -101,30 +102,30 @@
 
                 <div class="col-half">
                     <h5>Travel In</h5>
-                    <div class="input-group">
-                        <input type="date" id="start" name="trip-start" value="2021-01-01" min="2021-01-01"
-                            max="2021-12-31">
+                    <div class="input-group" required>
+                        <input type="date" id="start" name="travel-in" value="2021-01-01" min="2021-01-01"
+                            max="2021-12-31" required>
                     </div>
                 </div>
                 <div class="col-half">
                     <h5>Travel Out</h5>
-                    <div class="input-group">
-                        <input type="date" id="start" name="trip-start" value="2021-01-01" min="2021-01-01"
-                            max="2021-12-31">
+                    <div class="input-group" required>
+                        <input type="date" id="start" name="travel-out" value="2021-01-01" min="2021-01-01"
+                            max="2021-12-31" required>
                     </div>
                 </div>
                 <div class="col-half">
                     <h5>Onsite Begins</h5>
                     <div class="input-group">
-                        <input type="date" id="start" name="trip-start" value="2021-01-01" min="2021-01-01"
-                            max="2021-12-31">
+                        <input type="date" id="start" name="onsite-begins" value="2021-01-01" min="2021-01-01"
+                            max="2021-12-31" required>
                     </div>
                 </div>
                 <div class="col-half">
                     <h5>Onsite Ends</h5>
                     <div class="input-group">
-                        <input type="date" id="start" name="trip-start" value="2021-01-01" min="2021-01-01"
-                            max="2021-12-31">
+                        <input type="date" id="start" name="onsite-ends" value="2021-01-01" min="2021-01-01"
+                            max="2021-12-31" required>
                     </div>
                 </div>
             </div>
@@ -138,22 +139,22 @@
                             <h5>Onsite Rate</h5>
                         </div>
                         <div id="travel-rate" class="col-half">
-                            <input type="number" placeholder="$100" />
+                            <input type="number" name="travel-rate" placeholder="$100" required />
                         </div>
 
                         <div id="onsite-rate" class="col-half">
-                            <input type="number" placeholder="$300" />
+                            <input type="number" name="onsite-rate" placeholder="$300" required />
                         </div>
 
                     </div>
                 </div>
                 <div class="col-half">
-                    <h5>Expenese Reimbursed?</h5>
+                    <h5>Expenses Reimbursed?</h5>
                     <div class="input-group">
-                        <input id="gender-male" type="radio" name="gender" value="male" />
-                        <label for="gender-male">Yes</label>
-                        <input id="gender-female" type="radio" name="gender" value="female" />
-                        <label for="gender-female">No</label>
+                        <input id="yes" type="radio" name="reimburse-yes" value="Yes" required />
+                        <label for="yes">Yes</label>
+                        <input id="yes" type="radio" name="reimburse-no" value="No" required />
+                        <label for="yes">No</label>
                     </div>
                 </div>
             </div>
@@ -161,20 +162,20 @@
                 <h5>Additional Information</h5>
                 <div class="input-group">
                     <label for="additional"> </label>
-                    <textarea id="additional" name="additional" rows="4" cols="50"></textarea>
+                    <textarea name="notes" id="additional" name="additional" rows="4" cols="50"></textarea>
                 </div>
 
             </div>
             <div class="row">
                 <h5>Terms and Conditions</h5>
                 <div class="input-group">
-                    <input id="terms" type="checkbox" />
+                    <input name="terms" id="terms" type="checkbox" required />
                     <label for="terms">I've checked the details of this form at least 4 times and can be called an
                         <strong>idiot</strong> if any of these details are incorrect.</label>
                 </div>
             </div>
             <div class="row">
-                <div class="input-group"><input type="submit" value="Submit"></div>
+                <div class="input-group"><input type="submit" name="submit" value="Submit"></div>
             </div>
         </form>
     </div>
