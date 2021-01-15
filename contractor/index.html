@@ -28,27 +28,47 @@
                     <input type="email" placeholder="State" />
                     <div class="input-icon"><i class="fa fa-map"></i></div>
                 </div>
-
+                <div class="col-half">
+                    <h5>Event Start</h5>
+                    <div class="input-group">
+                        <input type="date" id="start" name="trip-start" value="2021-01-01" min="2021-01-01"
+                            max="2021-12-31">
+                    </div>
+                </div>
+                <div class="col-half">
+                    <h5>Event End</h5>
+                    <div class="input-group">
+                        <input type="date" id="start" name="trip-start" value="2021-01-01" min="2021-01-01"
+                            max="2021-12-31">
+                    </div>
+                </div>
             </div>
             <div class="row">
                 <h4>Contractor Information</h4>
-                <div class="input-group input-group-icon">
-                    <input type="text" placeholder="First Name" />
-                    <div class="input-icon"><i class="fa fa-user"></i></div>
-                </div>
-                <div class="input-group input-group-icon">
-                    <input type="text" placeholder="Last Name" />
-                    <div class="input-icon"><i class="fa fa-user"></i></div>
+                <div class="row">
+                    <div class="col-half input-group input-group-icon">
+                        <input type="text" placeholder="First Name" />
+                        <div class="input-icon"><i class="fa fa-user"></i></div>
+                    </div>
+                    <div class="col-half input-group input-group-icon">
+                        <input type="text" placeholder="Last Name" />
+                        <div class="input-icon"><i class="fa fa-user"></i></div>
+                    </div>
                 </div>
                 <div class="input-group input-group-icon">
                     <input type="email" placeholder="Email Adress" />
                     <div class="input-icon"><i class="fa fa-envelope"></i></div>
                 </div>
+                <div class="input-group input-group-icon">
+                    <input type="email" placeholder="Home Adress" />
+                    <div class="input-icon"><i class="fa fa-home"></i></div>
+                </div>
+
 
             </div>
 
             <div class="row">
-                <h4>Dates</h4>
+                <h4>Financials</h4>
                 <p>It's crucial that the dates here are entered correctly as it directly correlates to the payment which
                     will be issued to the hired contractor.</p>
 
@@ -122,11 +142,19 @@
                 </div>
             </div>
             <div class="row">
+                <h5>Additional Information</h5>
+                <div class="input-group">
+                    <label for="additional"> </label>
+                    <textarea id="additional" name="additional" rows="4" cols="50"></textarea>
+                </div>
+
+            </div>
+            <div class="row">
                 <h5>Terms and Conditions</h5>
                 <div class="input-group">
                     <input id="terms" type="checkbox" />
                     <label for="terms">I've checked the details of this form at least 4 times and can be called an
-                        <strong>idiot</strong> if any of these details are incorrect.s</label>
+                        <strong>idiot</strong> if any of these details are incorrect.</label>
                 </div>
             </div>
         </form>
