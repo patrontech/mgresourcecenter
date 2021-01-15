@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+        integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+        crossorigin="anonymous" />
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <form>
+            <div class="row">
+                <h4>Event Details</h4>
+                <div class="input-group input-group-icon">
+                    <input type="text" placeholder="Event" />
+                    <div class="input-icon"><i class="fa fa-users"></i></div>
+                </div>
+                <div class="input-group input-group-icon">
+                    <input type="text" placeholder="City" />
+                    <div class="input-icon"><i class="fa fa-city"></i></div>
+                </div>
+                <div class="input-group input-group-icon">
+                    <input type="email" placeholder="State" />
+                    <div class="input-icon"><i class="fa fa-map"></i></div>
+                </div>
+
+            </div>
+            <div class="row">
+                <h4>Contractor Information</h4>
+                <div class="input-group input-group-icon">
+                    <input type="text" placeholder="First Name" />
+                    <div class="input-icon"><i class="fa fa-user"></i></div>
+                </div>
+                <div class="input-group input-group-icon">
+                    <input type="text" placeholder="Last Name" />
+                    <div class="input-icon"><i class="fa fa-user"></i></div>
+                </div>
+                <div class="input-group input-group-icon">
+                    <input type="email" placeholder="Email Adress" />
+                    <div class="input-icon"><i class="fa fa-envelope"></i></div>
+                </div>
+
+            </div>
+
+            <div class="row">
+                <h4>Dates</h4>
+                <p>It's crucial that the dates here are entered correctly as it directly correlates to the payment which
+                    will be issued to the hired contractor.</p>
+
+
+                <p>Days in which there is no work for a contractor to do can be
+                    counted as a travel day even if no travel is actually taking place. If there are more than 2 travel
+                    days then please skip this form and manually process the agreement and invoice. </p>
+                <!-- <div class="input-group">
+                    <input id="payment-method-card" type="radio" name="payment-method" value="card" checked="true" />
+                    <label for="payment-method-card"><span><i class="fa fa-cc-visa"></i>Credit Card</span></label>
+                    <input id="payment-method-paypal" type="radio" name="payment-method" value="paypal" />
+                    <label for="payment-method-paypal"> <span><i class="fa fa-cc-paypal"></i>Paypal</span></label>
+                </div> -->
+
+                <div class="col-half">
+                    <h5>Travel In</h5>
+                    <div class="input-group">
+                        <input type="date" id="start" name="trip-start" value="2021-01-01" min="2021-01-01"
+                            max="2021-12-31">
+                    </div>
+                </div>
+                <div class="col-half">
+                    <h5>Travel Out</h5>
+                    <div class="input-group">
+                        <input type="date" id="start" name="trip-start" value="2021-01-01" min="2021-01-01"
+                            max="2021-12-31">
+                    </div>
+                </div>
+                <div class="col-half">
+                    <h5>Onsite Begins</h5>
+                    <div class="input-group">
+                        <input type="date" id="start" name="trip-start" value="2021-01-01" min="2021-01-01"
+                            max="2021-12-31">
+                    </div>
+                </div>
+                <div class="col-half">
+                    <h5>Onsite Ends</h5>
+                    <div class="input-group">
+                        <input type="date" id="start" name="trip-start" value="2021-01-01" min="2021-01-01"
+                            max="2021-12-31">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-half">
+                    <div class="input-group">
+                        <div class="col-half">
+                            <h5>Date of Birth</h5>
+                        </div>
+                        <div class="col-half">
+                            <h5>Date of Birth</h5>
+                        </div>
+                        <div id="travel-rate" class="col-half">
+                            <input type="number" placeholder="$100" />
+                        </div>
+
+                        <div id="onsite-rate" class="col-half">
+                            <input type="number" placeholder="$300" />
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-half">
+                    <h5>Expenese Reimbursed?</h5>
+                    <div class="input-group">
+                        <input id="gender-male" type="radio" name="gender" value="male" />
+                        <label for="gender-male">Yes</label>
+                        <input id="gender-female" type="radio" name="gender" value="female" />
+                        <label for="gender-female">No</label>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <h5>Terms and Conditions</h5>
+                <div class="input-group">
+                    <input id="terms" type="checkbox" />
+                    <label for="terms">I've checked the details of this form at least 4 times and can be called an
+                        <strong>idiot</strong> if any of these details are incorrect.s</label>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

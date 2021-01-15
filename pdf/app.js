@@ -159,3 +159,15 @@ var qrcode = new QRCode(document.getElementById("qrcode"), {
 });
 
 
+// update to this sam!!!
+// codepen.io/davidshimjs/pen/NdBYrg
+
+// $("#text").
+// 	on("blur", function () {
+// 		makeCode();
+// 	}).
+// 	on("keydown", function (e) {
+// 		if (e.keyCode == 13) {
+// 			makeCode();
+// 		}
+// 	});
