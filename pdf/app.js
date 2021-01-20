@@ -1,10 +1,10 @@
 jQuery(document).ready(function($) {
     var form = $('#form-customize')
     contract = $('#contract');
-    
+
 const options = {
   margin: .25,
-  filename: 'codepen-test.pdf',
+  filename: 'axess-quick-start.pdf',
   image: { 
     type: 'jpeg', 
     quality: 0.98 
