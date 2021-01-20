@@ -16,9 +16,13 @@ body {
 	line-height: 30px;
 }
 #contract p {
-	margin: 0 0 18px;
+	margin: 0 0 10px;
 }
 #contract .logo {
-	max-height: 180px;
-	margin-bottom: 30px;
+	margin-bottom: 10px;
 }
+
+#qrcode {
+	margin-top: .8em;
+}
+

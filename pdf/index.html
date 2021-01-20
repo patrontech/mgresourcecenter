@@ -3,16 +3,13 @@
 
 <head>
 	<meta charset="UTF-8">
-	<title>Axess U9000 Generator</title>
+	<title>Axess U9000 Quick Start Guide</title>
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap"
 		rel="stylesheet">
 	<link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
 	<link rel="dns-prefetch" href="//fonts.googleapis.com">
-	<link rel="dns-prefetch" href="//www.google-analytics.com">
-	<link rel="dns-prefetch" href="//camo.githubusercontent.com">
 	<link rel="dns-prefetch" href="//ajax.googleapis.com">
-	<link rel="dns-prefetch" href="//api.filepicker.io">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 
@@ -32,8 +29,8 @@
 	<div id="wrapper">
 		<div id="sidebar-wrapper">
 			<div id="ignorePDF" class="sidebar-inner">
-				<img style="width: 75%;" src="/img/patron-logo-white.svg">
-				<h3>Axess U9000 Quick Start</h3>
+				<img style="width: 75%;" src="/pdf/img/patron-logo-white.svg">
+				<h2 class="title">Axess U9000 Quick Start</h2>
 				<p class="sidebar-description">Fill out the below fields and click <strong>Save as PDF</strong></p>
 				<form id="form-customize" method="post">
 					<div class="row">
@@ -65,6 +62,7 @@
 			</form>
 
 
+
 		</div>
 		<div id="page-content-wrapper">
 			<div class="page-content">
@@ -79,53 +77,63 @@
 
 
 						<div class="row">
-							<div class="col">
 
 
 
-								<img src="img/patron-logo-black.png" class="logo">
+							<div id="page1">
 
 
-								<div class="section">
+								<div class="section row">
+									<img src="img/patron-logo-black.png" class="logo">
 									<h2>
 										Device Setup
 									</h2>
 
 
 									<p>
-										Press and hold the button on the top left side of your device to power it on.
+										Press and hold the button on the top left side of your device to power it
+										on.
 									</p>
 
 									<h4>
 										WiFi and Timezone
 									</h4>
 
-									<p>Connect the device to WiFi and set the timezone by pressing the three dots on the
+									<p>Connect the device to WiFi and set the timezone by pressing the three dots on
+										the
 										top
 										right
 										corner of the screen.</p>
 								</div>
 
-								<div class="section">
+								<div class="section row">
 									<h2>Login Credentials</h2>
-
-									<h4>Username:</h4>
-									<span class="item customername"> email address</span>
-
-									<h4>Password:</h4>
-									<span class="item address">password</span>
-
 									<p>
-										Launch Axess to login with the credentials listed below. Or, scan the QR code
+										Launch Axess to login with the credentials listed below. Or, scan the QR
+										code
 										pictured below.
 									</p>
 
-									<div id="qrcode"></div>
+									<div class="col-sm-4">
+
+										<h4>Username:</h4>
+										<span class="item customername"> email address</span>
+
+										<h4>Password:</h4>
+										<span class="item address">password</span>
+
+
+									</div>
+
+
+									<div class="col-sm-8">
+										<div id="qrcode"></div>
+									</div>
 
 								</div>
 
 
-								<div class="section">
+								<div class="section row">
 
 									<h2>
 										Axess Setup
@@ -147,7 +155,8 @@
 										2. Filter Price Levels
 									</h4>
 									<p>
-										Choose the event(s), then deselect any price levels that should not be valid on
+										Choose the event(s), then deselect any price levels that should not be valid
+										on
 										your
 										device.
 										Press Make Selection press Done.
@@ -159,6 +168,7 @@
 										Press Device Setup to restart this process.
 									</p>
 								</div>
+							</div>
 
 
 
@@ -166,9 +176,9 @@
 
 
 
+							<div id="page2">
 
-
-								<div class="section">
+								<div class="section row">
 									<h2>
 										Scanning Tickets </h2>
 
@@ -202,7 +212,7 @@
 
 								</ol>
 
-								<div class="section">
+								<div class="section row">
 									<h2>Searching for Customers</h2>
 									<p>The ticket is valid for one person and has been successfully scanned.</p>
 									<ul>
@@ -220,35 +230,34 @@
 										pictured below.
 									</p>
 								</div>
+							</div>
+						</div>
+					</div>
 
 
-							</div><!-- /#contract -->
 
 
 
 
-						</div><!-- /.container -->
-						<div id="editor"></div>
-
-					</div><!-- /.page-content -->
-				</div>
-			</div>
-
-		</div>
+				</div><!-- /.row -->
+			</div><!-- /#contract -->
+		</div><!-- /.page-content -->
+	</div>
 
 	</div>
 
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"
-		integrity="sha512-s/XK4vYVXTGeUSv4bRPOuxSDmDlTedEpMEcAQk0t/FMd9V6ft8iXdwSBxV0eD60c6w/tjotSlKu9J2AAW1ckTA=="
-		crossorigin="anonymous"></script>
+	</div>
+
+
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-	<script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/js/bootstrap.min.js"></script>
-	<script src="//api.filepicker.io/v2/filepicker.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"
-		integrity="sha512-ToRWKKOvhBSS8EtqSflysM/S7v9bB9V0X3B1+E7xo7XZBEZCPL3VX5SFIp8zxY19r7Sz0svqQVbAOx+QcLQSAQ=="
-		crossorigin="anonymous"></script>
+	<script src="html2pdf.bundle.min.js"></script>
 	<script src="app.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/js/bootstrap.min.js"></script>
 	<script src="vendor/qrcode.min.js"></script>
+
+
+
+
 
 </body>
 

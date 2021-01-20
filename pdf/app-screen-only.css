@@ -4,8 +4,10 @@
 * For details, see http://www.apache.org/licenses/LICENSE-2.0.
 */
 
-#qrcode {
-	display:none;
+.title {
+	font-size: 2rem;
+	color: #fffeff;
+	margin-bottom: 3em;
 }
 
 
@@ -15,11 +17,11 @@
 }
 
 .logo {
-	width: 30%;
+	width: 20%;
 }
 
 .section {
-	margin-bottom: 2em;
+	margin-bottom: 1.5em;
 }
 
 ol, ul {
@@ -406,4 +408,16 @@ MENU TOGGLE SWITCHES
 	background: linear-gradient(180deg, #FAFAFA 0%, #FAFAFA 96.9%);
 	border: 1px solid #C1CCD8;
 	color: #445365;
+}
+
+.btn-download{
+  display: inline-block;
+  text-decoration: none;
+  background-color: salmon;
+  color: #FAFAFA;
+  padding: 10px 62px;
+  margin: 10px auto;
+}
+.btn-download:hover{
+  opacity: 0.8;
 }

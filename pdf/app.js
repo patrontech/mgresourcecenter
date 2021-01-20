@@ -1,7 +1,144 @@
-jQuery(document).ready(function ($) {
+jQuery(document).ready(function($) {
+    var form = $('#form-customize')
+    contract = $('#contract');
+    
+const options = {
+  margin: .25,
+  filename: 'codepen-test.pdf',
+  image: { 
+    type: 'jpeg', 
+    quality: 0.98 
+  },
+  html2canvas: { 
+    scale: 2 
+  },
+  jsPDF: { 
+    unit: 'in', 
+    format: 'letter', 
+    orientation: 'portrait' 
+  }
+}
+    $("#cmd").click(function(e) {
+        e.preventDefault();
+        const element = document.getElementById('content');
+        html2pdf().from(element).set(options).save();
 
-	var form = $('#form-customize')
-		contract = $('#contract');
+   
+	});
+	
+      function test() {
+        // Get the element.
+        var element = document.getElementById('page1');
+
+        // Choose pagebreak options based on mode.
+        var mode = document.getElementById('mode').value;
+        var pagebreak = (mode === 'specify') ?
+            { mode: '', before: '.before', after: '.after', avoid: '.avoid' } :
+            { mode: specify };
+
+        // Generate the PDF.
+        html2pdf().from(element).set({
+          filename: mode + '.pdf',
+          pagebreak: pagebreak,
+          jsPDF: {orientation: 'portrait', unit: 'in', format: 'letter', compressPDF: true}
+        }).save();
+	  }
+	
+	
+	
+    /*
+    Editing the form
+     */
+    form.on('focus keyup change', '.form-control', function(event) {
+        event.preventDefault();
+        var inputName = $(this).attr('name');
+        var inputVal = $(this).val();
+        if (inputVal.length) {
+            contract.find('.' + inputName).addClass('item-editing').text(inputVal);
+        } else {
+            contract.find('.' + inputName).addClass('item-editing');
+        }
+    });
+
+    /*
+    Toggle sidebar visibility
+     */
+    $('.cmn-toggle-switch').on('click', function(event) {
+        event.preventDefault();
+        $(this).toggleClass('active');
+        $('#wrapper').toggleClass('toggled');
+    });
+
+
+
+
+    /*
+    Media Queries
+     */
+    if (matchMedia) {
+        var mq = window.matchMedia('(min-width: 768px) and (max-width: 1200px)');
+        mq.addListener(WidthChange);
+        WidthChange(mq);
+    }
+
+    function WidthChange(mq) {
+        if (mq.matches) {
+            $('textarea[name="payment"]').attr('rows', 1);
+        } else {
+            $('textarea[name="payment"]').attr('rows', 2);
+        }
+    }
+
+
+
+    var qrcode = new QRCode(document.getElementById("qrcode"), {
+        text: '',
+        width: 150,
+        height: 150,
+        colorDark: "#000000",
+        colorLight: "#ffffff",
+        correctLevel: QRCode.CorrectLevel.H
+    });
+
+    function makeCode() {
+        var elText = document.getElementById("email");
+        var elPass = document.getElementById("password");
+
+        if (!elText.value) {
+            elText.focus();
+            return;
+        }
+
+        qrcode.makeCode("CRED|" + elText.value + "|" + elPass.value);
+    }
+
+    makeCode();
+
+    $(".input").
+    on("blur", function() {
+        makeCode();
+        $("#qrcode").show();
+
+    });
+
+
+
+    $(".cmd").click(makeCode);
+
+});
+
+// update to this sam!!!
+// codepen.io/davidshimjs/pen/NdBYrg
+
+// $("#text").
+// 	on("blur", function () {
+// 		makeCode();
+// 	}).
+// 	on("keydown", function (e) {
+// 		if (e.keyCode == 13) {
+// 			makeCode();
+// 		}
+// 	});
 
 // 	// form.on('submit', function (e) {
 // 	// 	e.preventDefault();
@@ -10,7 +147,6 @@ jQuery(document).ready(function ($) {
 // 	// 	$('.inc_pdf').clone().addClass('temporary').prependTo('#contract');
 
 // 	// 	// Get the outerHTML
-		var html = contract.prop('outerHTML');
 
 // 	// 	/**
 // 	// 	 * Save to PDF
@@ -51,123 +187,4 @@ jQuery(document).ready(function ($) {
 //             'elementHandlers': elements
 //     	});
 //     	doc.save('demo.pdf');
-// 	});
-
-$("#cmd").click(function(e) {
-		 e.preventDefault();
-
-	
-        html2canvas(document.getElementById("content"), {
-            onrendered: function(canvas) {
-
-                var imgData = canvas.toDataURL('image/png');
-                console.log('Report Image URL: '+imgData);
-                var doc = new jsPDF('p', 'mm', 'letter'); 
-                
-				doc.addImage(imgData, 'PNG', 5, 5
-				);
-                doc.save('sample.pdf');
-            }
-        });
-
-	});
-
-
-
-	/*
-	Editing the form
-	 */
-	form.on('focus keyup change', '.form-control', function (event) {
-		event.preventDefault();
-		var inputName = $(this).attr('name');
-		var inputVal = $(this).val();
-		if (inputVal.length) {
-			contract.find('.' + inputName).addClass('item-editing').text(inputVal);
-		} else {
-			contract.find('.' + inputName).addClass('item-editing');
-		}
-	});
-
-	/*
-	Toggle sidebar visibility
-	 */
-	$('.cmn-toggle-switch').on('click', function (event) {
-		event.preventDefault();
-		$(this).toggleClass('active');
-		$('#wrapper').toggleClass('toggled');
-	});
-
-	
-
-
-	/*
-	Media Queries
-	 */
-	if (matchMedia) {
-		var mq = window.matchMedia('(min-width: 768px) and (max-width: 1200px)');
-		mq.addListener(WidthChange);
-		WidthChange(mq);
-	}
-
-	function WidthChange(mq) {
-		if (mq.matches) {
-			$('textarea[name="payment"]').attr('rows', 1);
-		} else {
-			$('textarea[name="payment"]').attr('rows', 2);
-		}
-	}
-
-
-
-var qrcode = new QRCode(document.getElementById("qrcode"), {
-	text: '',
-	width: 150,
-	height: 150,
-	colorDark : "#000000",
-	colorLight : "#ffffff",
-	correctLevel : QRCode.CorrectLevel.H
-});
-	function makeCode () {		
-		var elText = document.getElementById("email");
-		var elPass = document.getElementById("password");
-
-	if (!elText.value) {
-	elText.focus();
-	return;
-	}
-
-	qrcode.makeCode("CRED|" + elText.value + "|" + elPass.value);
-	}
-
-	makeCode();
-
-	$(".input").
-		on("blur", function () {
-			makeCode();
-			$("#qrcode").show();
-
-		});
-	
-	on("keydown", function (e) {
-		if (e.keyCode == 13) {
-		makeCode();
-		}
-	});
-	
-	$(".cmd").click(makeCode);
-
-});
-
-
-// update to this sam!!!
-// codepen.io/davidshimjs/pen/NdBYrg
-
-// $("#text").
-// 	on("blur", function () {
-// 		makeCode();
-// 	}).
-// 	on("keydown", function (e) {
-// 		if (e.keyCode == 13) {
-// 			makeCode();
-// 		}
 // 	});
