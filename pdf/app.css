@@ -10,7 +10,7 @@ body {
 	}
 
 	#page1 {
-		background-image: url(/img/u9000.png);
+		background-image: url('https://github.com/patrontech/mgresourcecenter/blob/master/pdf/img/u9000.png?raw=true');
 		background-repeat: no-repeat;
 		background-size: contain;
 		background-position: right;
@@ -19,7 +19,7 @@ body {
 		background-position-y: top;
 	}
 	.background {
-		background-image: url(/img/search.png);
+		background-image: url('https://github.com/patrontech/mgresourcecenter/blob/master/pdf/img/search.png?raw=true');
 		background-repeat: no-repeat;
 		background-size:25em;
 		background-position-x: right;
@@ -36,7 +36,7 @@ body {
 	}
 
 	#page1 {
-		background-image: url(/img/u9000.png);
+		background-image: url('https://github.com/patrontech/mgresourcecenter/blob/master/pdf/img/u9000.png?raw=true');
 		background-repeat: no-repeat;
 		background-size: contain;
 		background-position: right;
@@ -45,7 +45,7 @@ body {
 		background-position-y: top;
 	}
 	.background {
-		background-image: url(/img/search.png);
+		background-image: url('https://github.com/patrontech/mgresourcecenter/blob/master/pdf/img/search.png?raw=true');
 		background-repeat: no-repeat;
 		background-size:25em;
 		background-position-x: right;
