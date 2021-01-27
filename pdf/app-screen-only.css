@@ -11,10 +11,6 @@
 }
 
 
-.container {
-	margin-left: 5%!important;
-	margin-right: 5%!important;
-}
 
 .logo {
 	width: 20%;
@@ -72,9 +68,9 @@ p,ol,ul {
 }
 
 #cmd {
-	background: linear-gradient(180deg, #FAFAFA 0%, #FAFAFA 96.9%);
-	border: 1px solid #C1CCD8;
-	color: #445365;
+	background: ##1068A9;
+	border: 1px solid #1068A9;
+	color: #F6F7F9;
 }
 
 
@@ -402,12 +398,6 @@ MENU TOGGLE SWITCHES
 .cmn-toggle-switch__htx.active span::after {
 	-webkit-transition-delay: 0s, 0.3s;
 	transition-delay: 0s, 0.3s;
-}
-
-#cmd {
-	background: linear-gradient(180deg, #FAFAFA 0%, #FAFAFA 96.9%);
-	border: 1px solid #C1CCD8;
-	color: #445365;
 }
 
 .btn-download{

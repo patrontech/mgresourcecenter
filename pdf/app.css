@@ -1,19 +1,67 @@
 body {
 	font-family: 'Open Sans', sans-serif;
 }
-@media (min-width: 992px) {
+@media (min-width: 768px) {
 	.container {
 		width: 750px;
+		padding: 0 15px 0 15px;
+		margin-right: auto;
+		margin-left: auto;
+	}
+
+	#page1 {
+		background-image: url(/img/u9000.png);
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: right;
+		background-size: 45rem;
+		background-position-x: right;
+		background-position-y: top;
+	}
+	.background {
+		background-image: url(/img/search.png);
+		background-repeat: no-repeat;
+		background-size:25em;
+		background-position-x: right;
+		background-position-y: center;
+
 	}
 }
 @media (min-width: 1200px){
 	.container {
 		width: 750px;
+	    padding: 0 15px 0 15px;
+		margin-right: auto;
+		margin-left: auto;
+	}
+
+	#page1 {
+		background-image: url(/img/u9000.png);
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: right;
+		background-size: 45rem;
+		background-position-x: right;
+		background-position-y: top;
+	}
+	.background {
+		background-image: url(/img/search.png);
+		background-repeat: no-repeat;
+		background-size:25em;
+		background-position-x: right;
+		background-position-y: center;
+
 	}
 }
+
+
+
+
+
 #contract {
 	font-size: 16px;
 	line-height: 30px;
+	
 }
 #contract p {
 	margin: 0 0 10px;
@@ -24,5 +72,13 @@ body {
 
 #qrcode {
 	margin-top: .8em;
+	display: none;
+}
+
+
+
+li {
+	padding-top: .75em;
+	margin-left: none;
 }
 

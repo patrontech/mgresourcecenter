@@ -31,7 +31,7 @@
 			<div id="ignorePDF" class="sidebar-inner">
 				<img style="width: 60%; "
 					src="https://raw.githubusercontent.com/patrontech/mgresourcecenter/589c57914ea85fffe20559fbae5e8c07c44180a8/pdf/img/patron-logo-white.svg">
-				<h2 style="" class="title">Axess U9000 Quick Start</h2>
+				<h2 style="" class="title">Axess U9000 Quick Start Guide</h2>
 				<p class="sidebar-description">Fill out the below fields and click <strong>Save as PDF</strong></p>
 				<form id="form-customize" method="post">
 					<div class="row">
@@ -52,40 +52,44 @@
 							</div>
 						</div>
 
-
-
+						<div class="col-sm-12"><button type="submit" id="cmd" class="btn btn-primary btn-lg btn-block"
+								style="border-radius:4; ">
+								Save as PDF
+								<span class=" glyphicon glyphicon-download-alt" aria-hidden="true"></span></button>
+							<input id="input-html" type="hidden" name="html" value="">
+						</div>
 					</div>
+
 			</div>
-			<button type="submit" id="cmd" class="btn btn-primary btn-lg btn-block" style="border-radius:0; ">
-				Save as PDF
-				<span class=" glyphicon glyphicon-download-alt" aria-hidden="true"></span></button>
-			<input id="input-html" type="hidden" name="html" value="">
-			</form>
-
-
-
 		</div>
-		<div id="page-content-wrapper">
-			<div class="page-content">
-				<div class="container" id="content">
 
-					<!-- <button class="cmn-toggle-switch cmn-toggle-switch__htx active pull-right">
+		</form>
+
+
+
+	</div>
+	<div id="page-content-wrapper">
+		<div class="page-content">
+			<div class="container" id="content">
+
+				<!-- <button class="cmn-toggle-switch cmn-toggle-switch__htx active pull-right">
 						<span>toggle menu</span>
 					</button> -->
 
-					<div id="contract">
+				<div id="contract">
 
 
 
-						<div class="row">
+					<div class="row">
 
 
 
-							<div id="page1">
+						<div id="page1">
+							<img src="img/patron-logo-black.png" class="logo">
 
 
-								<div class="section row">
-									<img src="img/patron-logo-black.png" class="logo">
+							<div class="section row">
+								<div class="col-sm-5">
 									<h2>
 										Device Setup
 									</h2>
@@ -95,6 +99,7 @@
 										Press and hold the button on the top left side of your device to power it
 										on.
 									</p>
+									<br>
 
 									<h4>
 										WiFi and Timezone
@@ -106,8 +111,10 @@
 										right
 										corner of the screen.</p>
 								</div>
+							</div>
 
-								<div class="section row">
+							<div class="section row">
+								<div class="col-sm-6">
 									<h2>Login Credentials</h2>
 									<p>
 										Launch Axess to login with the credentials listed below. Or, scan the QR
@@ -115,27 +122,28 @@
 										pictured below.
 									</p>
 
-									<div class="col-sm-4">
+									<div class="col">
 
 										<h4>Username:</h4>
 										<span class="item customername"> email address</span>
 
 										<h4>Password:</h4>
 										<span class="item address">password</span>
-
-
 									</div>
 
-
-									<div class="col-sm-8">
-										<div id="qrcode"></div>
-									</div>
 
 								</div>
 
 
-								<div class="section row">
+								<div class="qrcode col-sm-8">
+									<div id="qrcode"></div>
+								</div>
 
+							</div>
+
+
+							<div class="section row">
+								<div class="col-sm-12">
 									<h2>
 										Axess Setup
 									</h2>
@@ -170,6 +178,7 @@
 									</p>
 								</div>
 							</div>
+						</div>
 
 
 
@@ -177,9 +186,10 @@
 
 
 
-							<div id="page2">
+						<div id="page2">
 
-								<div class="section row">
+							<div class="section row">
+								<div class="col-sm-12">
 									<h2>
 										Scanning Tickets </h2>
 
@@ -189,37 +199,47 @@
 										preferred method, is better for battery
 										life, speed, and performance. </p>
 
-									<h4>
-										Camera: </h4>
-									<ol>
-										<li>From the main menu, tap Launch Scanner</li>
-										<li>Position the ticket's QR code inside the center of the white box on the
-											camera's viewfinder.</li>
-										<li>Hold the ticket's barcode 6-8" from the scanner. If positioned correctly,
-											the scan will automatically happen.</li>
-									</ol>
-									<h4>
-										Laser: </h4>
-									<ol>
-										<li>From the main menu, tap Launch Scanner</li>
-										<li>Ready to scan will display on the4 screen.</li>
-										<li>Hold the barcode 6-8" from the scanner. Press and hold any of the4 scan
-											buttons
-											until the laser has read the barcode</li>
-									</ol>
+									<div class="col-sm-6">
+										<h4>
+											Camera: </h4>
+										<ol>
+											<li>From the main menu, tap Launch Scanner</li>
+											<li>Position the ticket's QR code inside the center of the white box on
+												the
+												camera's viewfinder.</li>
+											<li>Hold the ticket's barcode 6-8" from the scanner. If positioned
+												correctly,
+												the scan will automatically happen.</li>
+										</ol>
+									</div>
+									<div class="col-sm-6">
+										<h4>
+											Laser: </h4>
+										<ol>
+											<li>From the main menu, tap Launch Scanner</li>
+											<li>Ready to scan will display on the screen.</li>
+											<li>Hold the barcode 6-8" from the scanner. Press and hold any of the
+												scan
+												buttons
+												until the laser has read the barcode</li>
+										</ol>
+									</div>
 								</div>
+							</div>
 
 
 
-								</ol>
+							</ol>
 
-								<div class="section row">
+							<div class="section row background">
+								<div class="col-sm-6">
 									<h2>Searching for Customers</h2>
 									<p>The ticket is valid for one person and has been successfully scanned.</p>
 									<ul>
 										<li>From the Ready to Scan screen click the search icon.</li>
 										<li>Search by customer name or confirmation number.</li>
-										<li>Ticket Type Invalid- The ticket is for a price level that the device is not
+										<li>Ticket Type Invalid- The ticket is for a price level that the device is
+											not
 											configured to accept.</li>
 										<li>Tap the customer’s name, select Check In All or Check In each ticket
 											individually.</li>
@@ -227,22 +247,26 @@
 
 
 									<p>
-										Launch Axess to login with the credentials listed below. Or, scan the QR code
+										Launch Axess to login with the credentials listed below. Or, scan the QR
+										code
 										pictured below.
 									</p>
+								</div>
+								<div class="col-sm-6">
 								</div>
 							</div>
 						</div>
 					</div>
+				</div>
 
 
 
 
 
 
-				</div><!-- /.row -->
-			</div><!-- /#contract -->
-		</div><!-- /.page-content -->
+			</div><!-- /.row -->
+		</div><!-- /#contract -->
+	</div><!-- /.page-content -->
 	</div>
 
 	</div>
