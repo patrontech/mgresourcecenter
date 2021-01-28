@@ -10,7 +10,7 @@ const options = {
     quality: 0.98 
   },
   html2canvas: { 
-    scale: 1
+    scale: 3
   },
   jsPDF: { 
     unit: 'in', 
