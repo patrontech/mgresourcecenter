@@ -12,9 +12,6 @@
 
 
 
-.logo {
-	width: 20%;
-}
 
 .section {
 	margin-bottom: 1.5em;
@@ -212,9 +209,7 @@ p,ol,ul {
 		padding-top: 0;
 		text-align: center;
 	}
-	.sidebar-description {
-		text-align: center;
-	}
+
 
 }
 
