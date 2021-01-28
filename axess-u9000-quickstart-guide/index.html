@@ -51,7 +51,8 @@
 						<div class="col-lg-12 col-md-4 col-sm-4">
 							<div class="form-group">
 								<label class="sr-only">Password</label>
-								<input class="input form-control" type="text" name="address" id="password"
+								<input onkeyup="triggerCreateQRCode()" onmouseenter="this.focus()"
+									class="input form-control" type="text" name="address" id="password"
 									placeholder="Password" required>
 							</div>
 						</div>
@@ -119,12 +120,11 @@
 										<h2>Login Credentials</h2>
 										<p>
 											Launch Axess to login with the credentials listed below. Or, scan the QR
-											code
-											pictured below.
+											code pictured below.
 										</p>
 
-										<div class="col">
 
+										<div class="col-sm-5">
 											<h4>Username:</h4>
 											<span class="item customername"> email address</span>
 
@@ -132,22 +132,26 @@
 											<span class="item address">password</span>
 										</div>
 
+										<div class="col-sm-6">
+											<div id="qrcode"></div>
+										</div>
+
+
 
 									</div>
 
-
-									<div class="qrcode col-sm-8">
-										<div id="qrcode"></div>
-									</div>
 
 								</div>
 
+							</div>
 
-								<div class="section row">
-									<div class="col-sm-12">
-										<h2>
-											Axess Setup
-										</h2>
+
+							<div class="section row">
+								<div class="col-sm-12">
+									<h2>
+										Axess Setup
+									</h2>
+									<div class="col-sm-4">
 										<h4>
 											1. Select Events
 										</h4>
@@ -156,21 +160,27 @@
 										</p>
 
 										<p>
-											Tip: Filter and mass select events by tapping the checkmark on the top right
+											Tip: Filter and mass select events by tapping the checkmark on the top
+											right
 											corner
 											of the
 											screen.
 										</p>
+									</div>
+									<div class="col-sm-4">
 										<h4>
 											2. Filter Price Levels
 										</h4>
 										<p>
-											Choose the event(s), then deselect any price levels that should not be valid
+											Choose the event(s), then deselect any price levels that should not be
+											valid
 											on
 											your
 											device.
 											Press Make Selection press Done.
 										</p>
+									</div>
+									<div class="col-sm-4">
 										<h4>
 											3. Start Scanning
 										</h4>
@@ -180,6 +190,7 @@
 									</div>
 								</div>
 							</div>
+						</div>
 
 
 
@@ -187,99 +198,99 @@
 
 
 
-							<div id="page2">
+						<div id="page2">
 
-								<div class="section row">
-									<div class="col-sm-12">
-										<h2>
-											Scanning Tickets </h2>
+							<div class="section row">
+								<div class="col-sm-12">
+									<h2>
+										Scanning Tickets </h2>
 
 
-										<p>
-											There are two ways to scan ticket barcodes or QR codes. Laser scanning, our
-											preferred method, is better for battery
-											life, speed, and performance. </p>
+									<p>
+										There are two ways to scan ticket barcodes or QR codes. Laser scanning, our
+										preferred method, is better for battery
+										life, speed, and performance. </p>
 
-										<div class="col-sm-6">
-											<h4>
-												Camera: </h4>
-											<ol>
-												<li>From the main menu, tap Launch Scanner</li>
-												<li>Position the ticket's QR code inside the center of the white box on
-													the
-													camera's viewfinder.</li>
-												<li>Hold the ticket's barcode 6-8" from the scanner. If positioned
-													correctly,
-													the scan will automatically happen.</li>
-											</ol>
-										</div>
-										<div class="col-sm-6">
-											<h4>
-												Laser: </h4>
-											<ol>
-												<li>From the main menu, tap Launch Scanner</li>
-												<li>Ready to scan will display on the screen.</li>
-												<li>Hold the barcode 6-8" from the scanner. Press and hold any of the
-													scan
-													buttons
-													until the laser has read the barcode</li>
-											</ol>
-										</div>
+									<div class="col-sm-6">
+										<h4>
+											Camera: </h4>
+										<ol>
+											<li>From the main menu, tap Launch Scanner</li>
+											<li>Position the ticket's QR code inside the center of the white box on
+												the
+												camera's viewfinder.</li>
+											<li>Hold the ticket's barcode 6-8" from the scanner. If positioned
+												correctly,
+												the scan will automatically happen.</li>
+										</ol>
+									</div>
+									<div class="col-sm-6">
+										<h4>
+											Laser: </h4>
+										<ol>
+											<li>From the main menu, tap Launch Scanner</li>
+											<li>Ready to scan will display on the screen.</li>
+											<li>Hold the barcode 6-8" from the scanner. Press and hold any of the
+												scan
+												buttons
+												until the laser has read the barcode</li>
+										</ol>
 									</div>
 								</div>
+							</div>
 
 
 
-								</ol>
+							</ol>
 
-								<div class="section row background">
-									<div class="col-sm-6">
-										<h2>Searching for Customers</h2>
-										<p>The ticket is valid for one person and has been successfully scanned.</p>
-										<ul>
-											<li>From the Ready to Scan screen click the search icon.</li>
-											<li>Search by customer name or confirmation number.</li>
-											<li>Ticket Type Invalid- The ticket is for a price level that the device is
-												not
-												configured to accept.</li>
-											<li>Tap the customer’s name, select Check In All or Check In each ticket
-												individually.</li>
-										</ul>
+							<div class="section row background">
+								<div class="col-sm-6">
+									<h2>Searching for Customers</h2>
+									<p>The ticket is valid for one person and has been successfully scanned.</p>
+									<ul>
+										<li>From the Ready to Scan screen click the search icon.</li>
+										<li>Search by customer name or confirmation number.</li>
+										<li>Ticket Type Invalid- The ticket is for a price level that the device is
+											not
+											configured to accept.</li>
+										<li>Tap the customer’s name, select Check In All or Check In each ticket
+											individually.</li>
+									</ul>
 
 
-										<p>
-											Launch Axess to login with the credentials listed below. Or, scan the QR
-											code
-											pictured below.
-										</p>
-									</div>
-									<div class="col-sm-6">
-									</div>
+									<p>
+										Launch Axess to login with the credentials listed below. Or, scan the QR
+										code
+										pictured below.
+									</p>
+								</div>
+								<div class="col-sm-6">
 								</div>
 							</div>
 						</div>
 					</div>
+				</div>
 
 
 
 
 
 
-				</div><!-- /.row -->
-			</div><!-- /#contract -->
-		</div>
-		< </div>
+			</div><!-- /.row -->
+		</div><!-- /#contract -->
+	</div>
+	< </div>
 
 
-			<!-- /.page-content -->
+		<!-- /.page-content -->
 
 
 
-			<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-			<script src="html2pdf.bundle.min.js"></script>
-			<script src="app.js"></script>
-			<script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/js/bootstrap.min.js"></script>
-			<script src="vendor/qrcode.min.js"></script>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script src="html2pdf.bundle.min.js"></script>
+		<script src="app.js"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/js/bootstrap.min.js"></script>
+		<script src="vendor/qrcode.min.js"></script>
 
 
 

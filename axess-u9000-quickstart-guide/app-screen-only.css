@@ -16,7 +16,7 @@
 }
 
 .section {
-	margin-bottom: 1.5em;
+	margin-bottom: .5em;
 }
 
 ol, ul {
@@ -24,7 +24,7 @@ ol, ul {
 }
 
 p {
-	margin: .75em 0 .75em 0;
+	margin: .50em 0 .50em 0;
 }
 
 /* Toggle Styles */

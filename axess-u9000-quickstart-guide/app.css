@@ -10,16 +10,16 @@ body {
 	}
 
 	#page1 {
-		background-image: url('https://github.com/patrontech/mgresourcecenter/blob/master/axess-u9000-quickstart-guide/img/u9000.png?raw=true');
+		background-image: url(./img/u9000.png);
 		background-repeat: no-repeat;
 		background-size: contain;
 		background-position: right;
-		background-size: 45rem;
+		background-size: 40rem;
 		background-position-x: right;
 		background-position-y: top;
 	}
 	.background {
-		background-image: url('https://github.com/patrontech/mgresourcecenter/blob/master/axess-u9000-quickstart-guide/img/searcj.png?raw=true');
+		background-image: url(./img/search.png);
 		background-repeat: no-repeat;
 		background-size:25em;
 		background-position-x: right;
@@ -36,16 +36,16 @@ body {
 	}
 
 	#page1 {
-		background-image: url('https://github.com/patrontech/mgresourcecenter/blob/master/axess-u9000-quickstart-guide/img/u9000.png?raw=true');
+		background-image: url(./img/u9000.png);
 		background-repeat: no-repeat;
 		background-size: contain;
 		background-position: right;
-		background-size: 45rem;
+		background-size: 40rem;
 		background-position-x: right;
 		background-position-y: top;
 	}
 	.background {
-		background-image: url('https://github.com/patrontech/mgresourcecenter/blob/master/axess-u9000-quickstart-guide/img/search.png?raw=true');
+		background-image: url(/img/search.png);
 		background-repeat: no-repeat;
 		background-size:25em;
 		background-position-x: right;
@@ -71,8 +71,8 @@ body {
 }
 
 #qrcode {
-	margin-top: .8em;
-	display: none;
+	margin-top: 2.5em;
+	margin-left: 2em;
 }
 
 
