@@ -89,7 +89,7 @@ p,ol,ul {
 	z-index: 1000;
 	position: fixed;
 	left: 380px;
-	width: 380px;
+	width: 0;
 	height: 100%;
 	margin-left: -380px;
 	overflow-y: auto;
