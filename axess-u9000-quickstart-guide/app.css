@@ -45,7 +45,7 @@ body {
 		background-position-y: top;
 	}
 	.background {
-		background-image: url(/img/search.png);
+		background-image: url(./img/search.png);
 		background-repeat: no-repeat;
 		background-size:25em;
 		background-position-x: right;
