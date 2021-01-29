@@ -109,7 +109,7 @@ const options = {
             return;
         }
 
-        qrcode.makeCode("CRED|" + elText.value + "|" + elPass.value);
+        qrcode.makeCode("CRED||" + elText.value + "||" + elPass.value);
     }
 
     makeCode();
