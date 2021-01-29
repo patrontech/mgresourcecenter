@@ -47,7 +47,7 @@ h3 {
 h4{
 	font-size: 1.75rem;
 	font-weight: 600;
-	margin-bottom: .75em;
+	margin-bottom: .5em;
 }
 
 
@@ -67,7 +67,7 @@ p,ol,ul {
 }
 
 #cmd {
-	background: ##1068A9;
+	background: #1068A9;
 	border: 1px solid #1068A9;
 	color: #F6F7F9;
 }
@@ -229,6 +229,12 @@ body {
 }
 .sidebar-inner {
 	padding: 30px;
+	display: block;
+	margin: 0 auto;
+	
+
+
+	
 }
 .sidebar-about {
 	display: none;
@@ -408,4 +414,9 @@ MENU TOGGLE SWITCHES
 }
 .btn-download:hover{
   opacity: 0.8;
+}
+
+input {
+	display: block;
+	margin: 0 auto;
 }

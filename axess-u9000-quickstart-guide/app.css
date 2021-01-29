@@ -78,7 +78,7 @@ body {
 
 
 li {
-	padding-top: .5em;
+	padding-top: .25em;
 	margin-left: none;
 }
 
@@ -86,3 +86,4 @@ ul, ol {
 	list-style:none;
 	padding-left: 1em;
 }
+

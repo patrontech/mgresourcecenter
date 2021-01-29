@@ -29,9 +29,8 @@
 	<div id="wrapper">
 		<div id="sidebar-wrapper">
 			<div id="ignorePDF" class="sidebar-inner">
-				<img style="width: 192px; "
-					src="https://raw.githubusercontent.com/patrontech/mgresourcecenter/589c57914ea85fffe20559fbae5e8c07c44180a8/pdf/img/patron-logo-white.svg">
-				<h2 style="" class="title">Axess U9000 Quick Start Guide</h2>
+				<img style="width: 192px; " src="./img/patron-logo-white.svg">
+				<h2 class="title">Axess U9000 Quick Start Guide</h2>
 				<form id="form-customize" method="post">
 					<div class="row">
 
@@ -39,29 +38,31 @@
 							<p class="sidebar-description">Fill out the below fields and click <strong>Save as
 									PDF</strong></p>
 						</div>
-						<div class="col-lg-12 col-md-4 col-sm-4">
+						<div class="form">
+							<div class="col-lg-12 col-sm-4">
 
-							<div class="form-group">
-								<label class="sr-only">Email Address</label>
-								<input class="input form-control" type="text" name="customername" id="email"
-									placeholder="Email Address" required>
+								<div class="form-group">
+									<label class="sr-only">Email Address</label>
+									<input class="input form-control" type="text" name="customername" id="email"
+										placeholder="Email Address" required>
+								</div>
+
+							</div>
+							<div class="col-lg-12 col-sm-4">
+								<div class="form-group">
+									<label class="sr-only">Password</label>
+									<input onkeyup="triggerCreateQRCode()" onmouseenter="this.focus()"
+										class="input form-control" type="text" name="address" id="password"
+										placeholder="Password" required>
+								</div>
 							</div>
 
-						</div>
-						<div class="col-lg-12 col-md-4 col-sm-4">
-							<div class="form-group">
-								<label class="sr-only">Password</label>
-								<input onkeyup="triggerCreateQRCode()" onmouseenter="this.focus()"
-									class="input form-control" type="text" name="address" id="password"
-									placeholder="Password" required>
+							<div class="col-sm-8 col-lg-12"><button type="submit" id="cmd"
+									class="btn btn-primary btn-lg btn-block" style="border-radius:4; ">
+									Save as PDF
+									<span class=" glyphicon glyphicon-download-alt" aria-hidden="true"></span></button>
+								<input id="input-html" type="hidden" name="html" value="">
 							</div>
-						</div>
-
-						<div class="col-sm-12"><button type="submit" id="cmd" class="btn btn-primary btn-lg btn-block"
-								style="border-radius:4; ">
-								Save as PDF
-								<span class=" glyphicon glyphicon-download-alt" aria-hidden="true"></span></button>
-							<input id="input-html" type="hidden" name="html" value="">
 						</div>
 					</div>
 
@@ -141,55 +142,53 @@
 
 
 								</div>
+								<div class="section row">
+									<div class="col-sm-12">
+										<h2>
+											Axess Setup
+										</h2>
+										<div class="col-sm-4">
+											<h4>
+												1. Select Events
+											</h4>
+											<p>
+												Select your event(s) press Download Tickets for [x] Events.
+											</p>
 
-							</div>
 
+										</div>
+										<div class="col-sm-4">
+											<h4>
+												2. Filter Price Levels
+											</h4>
+											<p>
+												Choose the event(s), then deselect any price levels that should not be
+												valid
+												on
+												your
+												device.
+												Press Make Selection press Done.
+											</p>
+										</div>
+										<div class="col-sm-4">
+											<h4>
+												3. &nbsp;Start Scanning
+											</h4>
+											<p>
+												Press Device Setup to restart this process.
+											</p>
 
-							<div class="section row">
-								<div class="col-sm-12">
-									<h2>
-										Axess Setup
-									</h2>
-									<div class="col-sm-4">
-										<h4>
-											1. Select Events
-										</h4>
-										<p>
-											Select your event(s) press Download Tickets for [x] Events.
+										</div>
+										<p class="col-sm-12">
+											<em><strong>Tip</strong>: Filter and mass select events by tapping the
+												checkmark
+												on the top
+												right
+												corner
+												of the
+												screen.</em>
 										</p>
-
-
 									</div>
-									<div class="col-sm-4">
-										<h4>
-											2. Filter Price Levels
-										</h4>
-										<p>
-											Choose the event(s), then deselect any price levels that should not be
-											valid
-											on
-											your
-											device.
-											Press Make Selection press Done.
-										</p>
-									</div>
-									<div class="col-sm-4">
-										<h4>
-											3. &nbsp;Start Scanning
-										</h4>
-										<p>
-											Press Device Setup to restart this process.
-										</p>
-
-									</div>
-									<p class="col-sm-12">
-										<em><strong>Tip</strong>: Filter and mass select events by tapping the checkmark
-											on the top
-											right
-											corner
-											of the
-											screen.</em>
-									</p>
 								</div>
 							</div>
 						</div>
@@ -200,63 +199,72 @@
 
 
 						<br>
-						<div id="page2">
+						<div class="row">
+							<div id="page2">
 
-							<div class="section row">
-								<div class="col-sm-12">
-									<h2>
-										Scanning Tickets </h2>
+								<div class="section row">
+									<div class="col-sm-12">
+										<h2>
+											Scanning Tickets </h2>
 
 
-									<p>
-										There are two ways to scan ticket barcodes or QR codes. Laser scanning, our
-										preferred method, is better for battery
-										life, speed, and performance. </p>
+										<p>
+											There are two ways to scan ticket barcodes or QR codes. Laser scanning, our
+											preferred method, is better for battery
+											life, speed, and performance. </p>
 
-									<div class="col-sm-6">
-										<h4>
-											Camera: </h4>
-										<ol>
-											<li>1. &nbsp;&nbsp;&nbsp;From the main menu, tap <strong>Launch
-													Scanner</strong></li>
-											<li>2. &nbsp;&nbsp;&nbsp;Position the ticket's QR code inside the center of
-												the white box on the camera's viewfinder.</li>
-											<li>3. &nbsp;&nbsp;&nbsp;Hold the ticket's barcode 6-8" from the scanner. If
-												positioned correctly, the scan will automatically happen.</li>
-										</ol>
-									</div>
-									<div class="col-sm-6">
-										<h4>
-											Laser: </h4>
-										<ol>
-											<li>1. &nbsp;&nbsp;&nbsp;From the main menu, tap Launch Scanner</li>
-											<li>2. &nbsp;&nbsp;&nbsp;Ready to scan will display on the screen.</li>
-											<li>3. &nbsp;&nbsp;&nbsp;Hold the barcode 6-8" from the scanner. Press and
-												hold any of the scan buttons until the laser has read the barcode</li>
-										</ol>
+										<div class="col-sm-6">
+											<h4>
+												Camera: </h4>
+											<ol>
+												<li>1. &nbsp;&nbsp;&nbsp;From the main menu, tap <strong>Launch
+														Scanner</strong></li>
+												<li>2. &nbsp;&nbsp;&nbsp;Position the ticket's QR code inside the center
+													of
+													the white box on the camera's viewfinder.</li>
+												<li>3. &nbsp;&nbsp;&nbsp;Hold the ticket's barcode 6-8" from the
+													scanner. If
+													positioned correctly, the scan will automatically happen.</li>
+											</ol>
+										</div>
+										<div class="col-sm-6">
+											<h4>
+												Laser: </h4>
+											<ol>
+												<li>1. &nbsp;&nbsp;&nbsp;From the main menu, tap Launch Scanner</li>
+												<li>2. &nbsp;&nbsp;&nbsp;Ready to scan will display on the screen.</li>
+												<li>3. &nbsp;&nbsp;&nbsp;Hold the barcode 6-8" from the scanner. Press
+													and
+													hold any of the scan buttons until the laser has read the barcode
+												</li>
+											</ol>
+										</div>
 									</div>
 								</div>
-							</div>
 
 
 
-							</ol>
+								</ol>
 
-							<div class="section row background">
-								<div class="col-sm-6">
-									<h2>Searching for Customers</h2>
-									<p>The ticket is valid for one person and has been successfully scanned.</p>
-									<ol>
-										<li>1. &nbsp;&nbsp;&nbsp;From the Ready to Scan screen click the search icon.
-										</li>
-										<li>2. &nbsp;&nbsp;&nbsp;Search by customer name or confirmation number.</li>
-										<li>3. &nbsp;&nbsp;&nbsp;Tap the customer’s name, select Check In All or Check
-											In each ticket
-											individually.</li>
-									</ol>
+								<div class="section row background">
+									<div class="col-sm-6">
+										<h2>Searching for Customers</h2>
+										<p>The ticket is valid for one person and has been successfully scanned.</p>
+										<ol>
+											<li>1. &nbsp;&nbsp;&nbsp;From the Ready to Scan screen click the search
+												icon.
+											</li>
+											<li>2. &nbsp;&nbsp;&nbsp;Search by customer name or confirmation number.
+											</li>
+											<li>3. &nbsp;&nbsp;&nbsp;Tap the customer’s name, select Check In All or
+												Check
+												In each ticket
+												individually.</li>
+										</ol>
 
-								</div>
-								<div class="col-sm-6">
+									</div>
+									<div class="col-sm-6">
+									</div>
 								</div>
 							</div>
 						</div>

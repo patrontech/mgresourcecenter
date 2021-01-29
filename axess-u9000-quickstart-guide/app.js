@@ -22,9 +22,9 @@ const options = {
         e.preventDefault();
         const element = document.getElementById('content');
         html2pdf().from(element).set(options).save();
-
-   
-	});
+    });
+    
+    
 	
       function test() {
         // Get the element.
