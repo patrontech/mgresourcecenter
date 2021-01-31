@@ -1,21 +1,23 @@
-// Component Loaders
-$(function(){
-  $("#header").load("./components/header.html");
-});
 
-$(function(){
-  $("#footer").load("./components/footer.html");
-});
-
-
-$(function(){
-  $("#go-to-top").load("./components/go-to-top.html");
-});
 
 //---------------------------
 
 (function ($) {
   "use strict";
+
+  // Component Loaders
+  $(function(){
+    $("#header").load("./components/header.html");
+  });
+
+  $(function(){
+    $("#footer").load("./components/footer.html");
+  });
+
+
+  $(function(){
+    $("#go-to-top").load("./components/go-to-top.html");
+  });
 
   var fn = {
 
