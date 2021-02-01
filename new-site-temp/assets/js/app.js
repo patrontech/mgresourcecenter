@@ -6,18 +6,19 @@
   "use strict";
 
   // Component Loaders
-    $(function(){
-      $("#header").load("/components/header.html");
+ $(function(){
+      $("#header").load("/new-site-temp/components/header.html");
     });
 
     $(function(){
-      $("#footer").load("/components/footer.html");
+      $("#footer").load("/new-site-temp/components/footer.html");
     });
 
 
     $(function(){
-      $("#go-to-top").load("/components/go-to-top.html");
+      $("#go-to-top").load("m/new-site-temp/components/go-to-top.html");
     });
+
 
   var fn = {
 
