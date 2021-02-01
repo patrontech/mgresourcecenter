@@ -1,6 +1,20 @@
 (function ($) {
   "use strict";
 
+    // Component Loaders
+    $(function(){
+      $("#header").load("new-site-temp/components/footer.html");
+    });
+
+    $(function(){
+      $("#footer").load("new-site-temp/components/footer.html");
+    });
+
+
+    $(function(){
+      $("#go-to-top").load("new-site-temp/components/footer.html");
+    });
+
   var fn = {
 
     // Launch Functions
