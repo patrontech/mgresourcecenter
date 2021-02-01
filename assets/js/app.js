@@ -3,16 +3,16 @@
 
     // Component Loaders
     $(function(){
-      $("#header").load("new-site-temp/components/footer.html");
+      $("#header").load("/new-site-temp/components/header.html");
     });
 
     $(function(){
-      $("#footer").load("new-site-temp/components/footer.html");
+      $("#footer").load("/new-site-temp/components/footer.html");
     });
 
 
     $(function(){
-      $("#go-to-top").load("new-site-temp/components/footer.html");
+      $("#go-to-top").load("m/new-site-temp/components/go-to-top.html");
     });
 
   var fn = {
