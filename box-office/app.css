@@ -1,0 +1,60 @@
+body {
+	font-family: 'Open Sans', sans-serif;
+}
+@media (min-width: 768px) {
+	.container {
+		width: 750px;
+		padding: 0 15px 0 15px;
+		margin-right: auto;
+		margin-left: auto;
+	}
+
+
+}
+@media (min-width: 1200px){
+	.container {
+		width: 750px;
+	    padding: 0 15px 0 15px;
+		margin-right: auto;
+		margin-left: auto;
+	}
+
+
+}
+
+img {
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+
+
+#contract {
+	font-size: 16px;
+	line-height: 30px;
+	
+}
+#contract p {
+	margin: 0 0 10px;
+}
+#contract .logo {
+	margin-bottom: 10px;
+}
+
+#qrcode {
+	margin-top: 2.5em;
+	padding-left: 6em;
+}
+
+
+
+li {
+	padding-top: .25em;
+	margin-left: none;
+}
+
+ul, ol {
+	list-style:none;
+	padding-left: 1em;
+}
+
